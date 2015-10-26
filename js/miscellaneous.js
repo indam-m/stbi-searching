@@ -9,7 +9,6 @@ $(function () {
         init: function () {
             Site.sidebarToggle();
             Site.controlSubMenu();
-            Site.convertMonth();
             Site.fullHeight();
         },
 
