@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+button,
+input,
+select,
+textarea{
+    color: #464646;
+}
+
+html, body{
+    background: url('../img/background.png') !important;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Amaranth';
+}
+
+body{
+    font-family: 'TitilliumWeb';
+    font-size: 16px;
+    color: #1b1b1b;
+    margin: 0 0 48px;
+}
+
+fieldset{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea{
+    resize: vertical;
+}
+
+audio,
+canvas,
+img,
+video{
+    vertical-align: middle;
+}
+
+a {
+    cursor: pointer;
+    color: #1bbb8d;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: #199d77;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+input[type="text"],
+input[type="password"],
+select.form-control {
+    box-shadow: none;
+    border-color: #ccc;
+    border-radius: 0;
+}

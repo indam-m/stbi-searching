@@ -1,0 +1,54 @@
+.pa__form {
+    margin-top: 22px;
+}
+
+.pa__btn-container-form {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.pa__input-group-addon {
+	border-radius: 0;
+	border: 1px solid #1bbb8d;
+	background: #1bbb8d;
+	color: #fff;
+	font-family: 'Amaranth';
+	font-size: 18px;
+}
+
+.btn-margin-bottom {
+	margin-bottom: 8px;
+}
+
+.pa--success {
+	color: #1bbb8d;
+}
+
+.pa--fail {
+	color: #f46f4c;
+}
+
+.pa__top-pad {
+	padding-top: 8px;
+}
+
+.success-isi-hide {
+	display: none;
+}
+
+.success-siram-hide {
+	display: none;
+}
+
+.fail-isi-hide {
+	display: none;
+}
+
+.fail-siram-hide {
+	display: none;
+}
+
+.help-block-custom {
+	margin-bottom: 0;
+	font-size: 13px;
+}

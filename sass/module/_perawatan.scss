@@ -1,0 +1,19 @@
+.perawatan--heading {
+    text-align: center;
+    font-family: 'TitilliumWeb';
+    margin-top: 50px;
+}
+
+.perawatan__margin {
+	margin-top: 20px;
+}
+
+.btn-red-margin-p {
+	margin-top: 18px;
+}
+
+@media (max-width: 767px) {
+	.perawatan__margin-mobile {
+		margin-top: 34px;
+	}
+}

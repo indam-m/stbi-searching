@@ -1,0 +1,22 @@
+.ls__alert {
+	background: #fff;
+	border-left: 7px solid #f46f4c;
+	padding: 10px;
+	margin-bottom: 18px;
+	-webkit-box-shadow: -2px 1px 14px 0px rgba(123,123,123,0.39);
+	-moz-box-shadow: -2px 1px 14px 0px rgba(123,123,123,0.39);
+	box-shadow: -2px 1px 14px 0px rgba(123,123,123,0.39);
+}
+
+.ls--text-alert {
+	font-size: 14px;
+	text-align: justify;
+	padding-right: 1px !important;
+	padding-left: 7px !important;
+}
+
+.ls--icon-alert {
+	color: #f46f4c;
+	font-size: 26px;
+	padding-left: 7px !important;
+}

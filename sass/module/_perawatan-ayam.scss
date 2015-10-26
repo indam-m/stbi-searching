@@ -1,0 +1,101 @@
+.pa__box {
+	border-top: 8px solid #f46f4c;
+	border-bottom: 8px solid #f46f4c;
+	background: #fff;
+	-webkit-box-shadow: -2px 1px 14px 0px rgba(123,123,123,0.39);
+	-moz-box-shadow: -2px 1px 14px 0px rgba(123,123,123,0.39);
+	box-shadow: -2px 1px 14px 0px rgba(123,123,123,0.39);
+	margin-top: 15px;
+}
+
+.pa--heading {
+	color: #f46f4c;
+	font-family: 'Amaranth';
+	font-size: 33px;
+	margin-bottom: 12px;
+}
+
+@media (max-width: 565px) {
+	.pa--heading {
+		font-size: 29px;
+	}
+
+	.pa__box {
+		padding: 20px;
+	}
+
+	.pa__padding {
+		padding: 80px 10px 50px 10px !important;
+	}
+}
+
+@media (min-width: 566px) {
+	.pa__box {
+		padding: 38px;
+	}
+}
+
+@media (max-width: 425px) {
+	.pa--heading {
+		font-size: 26px;
+	}
+}
+
+ul.pa__list {
+	list-style: none;
+}
+
+.pa__list-li {
+	line-height: 0;
+	margin-top: 32px;
+}
+
+li.pa__list-li:before {
+	content: "• ";
+	color: #1bbb8d;
+}
+
+.pa__btn-container {
+	text-align: right;
+	margin-top: 38px;
+}
+
+@media (max-width: 440px) {
+	ul.pa__list {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.pa--line-break {
+	line-height: 1.5;
+	margin-top: -11px
+}
+
+.success-box {
+	background: #1bbb8d;
+	color: #fff;
+	padding: 7px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	font-size: 17px;
+}
+
+.fail-box {
+	background: #f46f4c;
+	color: #fff;
+	padding: 7px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	font-size: 17px;
+}
+
+.no-padding-left-box {
+	padding-left: 3px;
+}
+
+.box--icon {
+	margin-right: 5px;
+}
