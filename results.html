@@ -57,30 +57,65 @@
           <div class="row">
             <div class="col-md-7 grid-center pa__box">
               <div class="pa--heading">
-                Searching
+                Searching Results
               </div>
-              <form class="form-horizontal pa__form">
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Searching type</label>
-                  <div class="col-md-7">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" id="experiment" name="searchType" value="experiment" onclick="load_experiment()" checked>
-                        Experiment
-                      </label><br>
-                      <label>
-                        <input type="radio" id="interactive" name="searchType" value="interactive" onclick="load_interactive()" >
-                        Interactive
-                      </label>
+              <ol>
+                <li class="result"><b>Query : </b><i>abc def</i>
+                  <div class="form-horizontal pa__form">
+                    <div class="row">
+                      <div class="col-md-2"><b>Documents</b></div>
+                      <div class="col-md-8">
+                        <ol>
+                          <li>D1</li>
+                          <li>D2</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><b>Precision</b></div>
+                      <div class="col-md-8">30</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><b>Recall</b></div>
+                      <div class="col-md-8">30</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><b>NIAP</b></div>
+                      <div class="col-md-8">30</div>
                     </div>
                   </div>
-                </div>
-              </form>
-              <div id="loadSearch"></div>
+                </li><br>
+                <li class="result"><b>Query : </b><i>abc def</i>
+                  <div class="form-horizontal pa__form">
+                    <div class="row">
+                      <div class="col-md-2"><b>Documents</b></div>
+                      <div class="col-md-8">
+                        <ol>
+                          <li>D1</li>
+                          <li>D2</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><b>Precision</b></div>
+                      <div class="col-md-8">30</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><b>Recall</b></div>
+                      <div class="col-md-8">30</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><b>NIAP</b></div>
+                      <div class="col-md-8">30</div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
+
       <footer class="footer-s">
         <div class="footer-s__container">
           <div class="footer-s--right">
@@ -98,20 +133,5 @@
     <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/miscellaneous.js"></script>
-
-<script>
-function load_interactive(){
-  $.get('interactive-searching.html').then(function(responseData) {
-    $('#loadSearch').html(responseData);
-  });
-}
-function load_experiment(){
-  $.get('experiment-searching.html').then(function(responseData) {
-    $('#loadSearch').html(responseData);
-  });
-}
-
-</script>
-
   </body>
 </html>

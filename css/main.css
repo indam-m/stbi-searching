@@ -444,6 +444,11 @@ nav.sidebar-s ul li.sidebar-s--has-sub a:focus {
   box-shadow: -2px 1px 14px 0px rgba(123, 123, 123, 0.39);
   margin-top: 15px; }
 
+.result {
+  padding-bottom: 25px; 
+  border-bottom: 3px dotted #8B4513;
+  background: #fff; }
+
 .pa--heading {
   color: #f46f4c;
   font-family: 'Amaranth';
