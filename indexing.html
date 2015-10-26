@@ -59,29 +59,29 @@
               <div class="pa--heading">
                 Indexing
               </div>
-              <form class="form-horizontal pa__form" action="index.html">
+              <form class="form-horizontal pa__form" action="index.html" method="post">
                 <div class="form-group">
                   <label class="col-md-4 control-label">Document Location</label>
                   <div class="col-md-7">
-                    <input type="file" id="document">
+                    <input type="file" id="document" name="document">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-4 control-label">Query Location</label>
                   <div class="col-md-7">
-                    <input type="file" id="query">
+                    <input type="file" id="query" name="query">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-4 control-label">Relevance Judgement</label>
                   <div class="col-md-7">
-                    <input type="file" id="relevance">
+                    <input type="file" id="relevance" name="relevance">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-4 control-label">Stopword Location</label>
                   <div class="col-md-7">
-                    <input type="file" id="stopword">
+                    <input type="file" id="stopword" name="stopword">
                   </div>
                 </div>
 
@@ -93,23 +93,23 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="docTF" name="docTFRadios" value="no" checked>
+                            <input type="radio" id="docTF" name="docTF" value="no" checked>
                             No TF
                           </label><br>
                           <label>
-                            <input type="radio" id="docTF" name="docTFRadios" value="raw">
+                            <input type="radio" id="docTF" name="docTF" value="raw">
                             Raw TF
                           </label><br>
                           <label>
-                            <input type="radio" id="docTF" name="docTFRadios" value="binary">
+                            <input type="radio" id="docTF" name="docTF" value="binary">
                             Binary TF
                           </label><br>
                           <label>
-                            <input type="radio" id="docTF" name="docTFRadios" value="augmented">
+                            <input type="radio" id="docTF" name="docTF" value="augmented">
                             Augmented TF
                           </label><br>
                           <label>
-                            <input type="radio" id="docTF" name="docTFRadios" value="logarithmic">
+                            <input type="radio" id="docTF" name="docTF" value="logarithmic">
                             Logarithmic TF
                           </label>
                         </div>
@@ -120,11 +120,11 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="docIDF" name="docIDFRadios" value="no" checked>
+                            <input type="radio" id="docIDF" name="docIDF" value="no" checked>
                             No IDF
                           </label><br>
                           <label>
-                            <input type="radio" id="docIDF" name="docIDFRadios" value="yes">
+                            <input type="radio" id="docIDF" name="docIDF" value="yes">
                             Using TF
                           </label>
                         </div>
@@ -135,11 +135,11 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="docNormalisation" name="docNormRadios" value="no" checked>
+                            <input type="radio" id="docNormalisation" name="docNormalisation" value="no" checked>
                             No Normalisation
                           </label><br>
                           <label>
-                            <input type="radio" id="docNormalisation" name="docNormRadios" value="yes">
+                            <input type="radio" id="docNormalisation" name="docNormalisation" value="yes">
                             Using Normalisation
                           </label>
                         </div>
@@ -150,11 +150,11 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="docStemming" name="docStemRadios" value="no" checked>
+                            <input type="radio" id="docStemming" name="docStemming" value="no" checked>
                             No Stemming
                           </label><br>
                           <label>
-                            <input type="radio" id="docStemming" name="docStemRadios" value="yes">
+                            <input type="radio" id="docStemming" name="docStemming" value="yes">
                             Using Stemming
                           </label>
                         </div>
@@ -169,23 +169,23 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="queryTF" name="queryTFRadios" value="no" checked>
+                            <input type="radio" id="queryTF" name="queryTF" value="no" checked>
                             No TF
                           </label><br>
                           <label>
-                            <input type="radio" id="queryTF" name="queryTFRadios" value="raw">
+                            <input type="radio" id="queryTF" name="queryTF" value="raw">
                             Raw TF
                           </label><br>
                           <label>
-                            <input type="radio" id="queryTF" name="queryTFRadios" value="binary">
+                            <input type="radio" id="queryTF" name="queryTF" value="binary">
                             Binary TF
                           </label><br>
                           <label>
-                            <input type="radio" id="queryTF" name="queryTFRadios" value="augmented">
+                            <input type="radio" id="queryTF" name="queryTF" value="augmented">
                             Augmented TF
                           </label><br>
                           <label>
-                            <input type="radio" id="queryTF" name="queryTFRadios" value="logarithmic">
+                            <input type="radio" id="queryTF" name="queryTF" value="logarithmic">
                             Logarithmic TF
                           </label>
                         </div>
@@ -196,11 +196,11 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="queryIDF" name="queryIDFRadios" value="no" checked>
+                            <input type="radio" id="queryIDF" name="queryIDF" value="no" checked>
                             No IDF
                           </label><br>
                           <label>
-                            <input type="radio" id="queryIDF" name="queryIDFRadios" value="yes">
+                            <input type="radio" id="queryIDF" name="queryIDF" value="yes">
                             Using TF
                           </label>
                         </div>
@@ -211,11 +211,11 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="queryNormalisation" name="queryNormRadios" value="no" checked>
+                            <input type="radio" id="queryNormalisation" name="queryNormalisation" value="no" checked>
                             No Normalisation
                           </label><br>
                           <label>
-                            <input type="radio" id="queryNormalisation" name="queryNormRadios" value="yes">
+                            <input type="radio" id="queryNormalisation" name="queryNormalisation" value="yes">
                             Using Normalisation
                           </label>
                         </div>
@@ -226,11 +226,11 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="queryStemming" name="queryStemRadios" value="no" checked>
+                            <input type="radio" id="queryStemming" name="queryStemming" value="no" checked>
                             No Stemming
                           </label><br>
                           <label>
-                            <input type="radio" id="queryStemming" name="queryStemRadios" value="yes">
+                            <input type="radio" id="queryStemming" name="queryStemming" value="yes">
                             Using Stemming
                           </label>
                         </div>
