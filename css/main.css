@@ -455,6 +455,12 @@ nav.sidebar-s ul li.sidebar-s--has-sub a:focus {
   font-size: 33px;
   margin-bottom: 12px; }
 
+.pa--heading2 {
+  color: #A52A2A;
+  font-family: 'Amaranth';
+  font-size: 20px;
+  margin-bottom: 12px; }
+
 @media (max-width: 565px) {
   .pa--heading {
     font-size: 29px; }
