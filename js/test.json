@@ -1,0 +1,10 @@
+[
+{ "word": "system",
+       "raw_tf": 1,
+       "log_tf": 1,
+       "aug_tf": 0.6666666666666666 },
+     { "word": "theori",
+       "raw_tf": 1,
+       "log_tf": 1,
+       "aug_tf": 0.6666666666666666 } 
+]

@@ -1,3 +1,15 @@
+<?php
+$abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
+$command = '/usr/local/bin/node '.$abs_path.'js/main.js';
+$query = $_GET['query'];
+$string = file_get_contents("js/test2.json");
+$output = json_decode($string);
+$sum = $output->sum;
+$rank = $output->rank;
+exec($command);
+echo $command;
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,7 +28,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
-  <body class="sticky-display" onload="load_experiment()">
+  <body class="sticky-display">
     <div id="lightbox-shadow"></div>
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -36,15 +48,15 @@
 
       <nav class="sidebar-s">
         <ul class="sidebar-s--divider">
-          <li><a href="index.html">
+          <li><a href="index.php">
             <i class="fa fa-home sidebar-s--icon-p"></i>
             Main Page
           </a></li>
-          <li><a href="indexing.html">
+          <li><a href="indexing.php">
             <i class="fa fa-leaf sidebar-s--icon-p"></i>
             Indexing
           </a></li>
-          <li><a href="searching.html">
+          <li><a href="searching.php">
             <i class="fa fa-search sidebar-s--icon-p"></i>
             Searching
           </a></li>
@@ -57,30 +69,25 @@
           <div class="row">
             <div class="col-md-7 grid-center pa__box">
               <div class="pa--heading">
-                Searching
+                Searching Results
               </div>
-              <form class="form-horizontal pa__form">
-                <div class="form-group result">
-                  <label class="col-md-4 control-label">Searching type</label>
-                  <div class="col-md-7">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" id="experiment" name="searchType" value="experiment" onclick="load_experiment()" checked>
-                        Experiment
-                      </label><br>
-                      <label>
-                        <input type="radio" id="interactive" name="searchType" value="interactive" onclick="load_interactive()" >
-                        Interactive
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <div id="loadSearch"></div>
+              <br>
+              <?php echo'
+              <div class="pa--heading2">Results of <i>'.$query.'</i></div>
+              <b>Found : '.$sum.'</b>
+              <ol>';
+              foreach($rank as $row){
+                echo '<li>
+                  <div class="form-horizontal pa__form">'.$row.'</div>
+                </li>';
+              }
+              ?>
+              </ol>
             </div>
           </div>
         </div>
       </div>
+
       <footer class="footer-s">
         <div class="footer-s__container">
           <div class="footer-s--right">
@@ -98,20 +105,5 @@
     <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/miscellaneous.js"></script>
-
-<script>
-function load_interactive(){
-  $.get('interactive-searching.html').then(function(responseData) {
-    $('#loadSearch').html(responseData);
-  });
-}
-function load_experiment(){
-  $.get('experiment-searching.html').then(function(responseData) {
-    $('#loadSearch').html(responseData);
-  });
-}
-
-</script>
-
   </body>
 </html>

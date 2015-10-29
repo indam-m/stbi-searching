@@ -1,4 +1,4 @@
-<form class="form-horizontal pa__form" action="results.html">
+<form class="form-horizontal pa__form" action="results-interactive.php">
 	<div class="form-group">
 	  <label class="col-md-4 control-label">Query</label>
 	  <div class="col-md-7">

@@ -1,3 +1,37 @@
+<?php
+$abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/';
+
+// $document = $_GET['document'];
+// $query = $_GET['query'];
+// $relevance = $_GET['relevance'];
+// $stopword = $_GET['stopword'];
+
+$document = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all';
+$query = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text';
+$relevance = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text';
+$stopword = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt';
+
+$docTF = $_GET['docTF'];
+$docIDF = $_GET['docIDF'];
+$docNormalisation = $_GET['docNormalisation'];
+$docStemming = $_GET['docStemming'];
+$queryTF = $_GET['queryTF'];
+$queryIDF = $_GET['queryIDF'];
+$queryNormalisation = $_GET['queryNormalisation'];
+$queryStemming = $_GET['queryStemming'];
+
+$docsetting = $docTF . ' ' . $docIDF . ' ' . $docNormalisation . ' ' . $docStemming;
+$querysetting = $queryTF . ' ' . $queryIDF . ' ' . $queryNormalisation . ' ' . $queryStemming;
+
+$command = '/usr/local/bin/node '.$abs_path.'js/main.js '.$document.' '.$query.' '.$relevance.' '.$stopword.' '.$docsetting.' '.$querysetting;
+exec($command);
+
+$string = file_get_contents("js/test3.json");
+$output = json_decode($string);
+$results = $output->data;
+
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -36,15 +70,15 @@
 
       <nav class="sidebar-s">
         <ul class="sidebar-s--divider">
-          <li><a href="index.html">
+          <li><a href="index.php">
             <i class="fa fa-home sidebar-s--icon-p"></i>
             Main Page
           </a></li>
-          <li><a href="indexing.html">
+          <li><a href="indexing.php">
             <i class="fa fa-leaf sidebar-s--icon-p"></i>
             Indexing
           </a></li>
-          <li><a href="searching.html">
+          <li><a href="searching.php">
             <i class="fa fa-search sidebar-s--icon-p"></i>
             Searching
           </a></li>
@@ -59,28 +93,39 @@
               <div class="pa--heading">
                 Searching Results
               </div>
-              <ul>
-                <li class="result">
-                  <div class="form-horizontal pa__form">
-                    <div class="pa--heading2">
-                      Lorem ipsum
+              <ol>
+                <?php 
+                foreach($results as $res){
+                  echo'
+                  <li class="result"><b>Query : </b><i>'.$res->query.'</i>
+                    <div class="form-horizontal pa__form">
+                      <div class="row">
+                        <div class="col-md-2"><b>Documents</b></div>
+                        <div class="col-md-8">
+                          <ol>';
+                            foreach($res->rank as $row){
+                              echo '<li>'.$row.'</li>';
+                            }                          
+                          echo '</ol>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2"><b>Precision</b></div>
+                        <div class="col-md-8">'.$res->precision.'</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2"><b>Recall</b></div>
+                        <div class="col-md-8">'.$res->recall.'</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2"><b>NIAP</b></div>
+                        <div class="col-md-8">'.$res->niap.'</div>
+                      </div>
                     </div>
-                    <div class="row">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </div>
-                  </div>
-                </li><br>
-                <li class="result">
-                  <div class="form-horizontal pa__form">
-                    <div class="pa--heading2">
-                      Lorem ipsum
-                    </div>
-                    <div class="row">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </div>
-                  </div>
-                </li><br>
-              </ul>
+                  </li><br>';
+                }
+                ?>
+              </ol>
             </div>
           </div>
         </div>

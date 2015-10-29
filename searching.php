@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
-  <body class="sticky-display">
+  <body class="sticky-display" onload="load_experiment()">
     <div id="lightbox-shadow"></div>
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -36,15 +36,15 @@
 
       <nav class="sidebar-s">
         <ul class="sidebar-s--divider">
-          <li><a href="index.html">
+          <li><a href="index.php">
             <i class="fa fa-home sidebar-s--icon-p"></i>
             Main Page
           </a></li>
-          <li><a href="indexing.html">
+          <li><a href="indexing.php">
             <i class="fa fa-leaf sidebar-s--icon-p"></i>
             Indexing
           </a></li>
-          <li><a href="searching.html">
+          <li><a href="searching.php">
             <i class="fa fa-search sidebar-s--icon-p"></i>
             Searching
           </a></li>
@@ -57,65 +57,30 @@
           <div class="row">
             <div class="col-md-7 grid-center pa__box">
               <div class="pa--heading">
-                Searching Results
+                Searching
               </div>
-              <ol>
-                <li class="result"><b>Query : </b><i>abc def</i>
-                  <div class="form-horizontal pa__form">
-                    <div class="row">
-                      <div class="col-md-2"><b>Documents</b></div>
-                      <div class="col-md-8">
-                        <ol>
-                          <li>D1</li>
-                          <li>D2</li>
-                        </ol>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-2"><b>Precision</b></div>
-                      <div class="col-md-8">30</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-2"><b>Recall</b></div>
-                      <div class="col-md-8">30</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-2"><b>NIAP</b></div>
-                      <div class="col-md-8">30</div>
+              <form class="form-horizontal pa__form">
+                <div class="form-group result">
+                  <label class="col-md-4 control-label">Searching type</label>
+                  <div class="col-md-7">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" id="experiment" name="searchType" value="experiment" onclick="load_experiment()" checked>
+                        Experiment
+                      </label><br>
+                      <label>
+                        <input type="radio" id="interactive" name="searchType" value="interactive" onclick="load_interactive()" >
+                        Interactive
+                      </label>
                     </div>
                   </div>
-                </li><br>
-                <li class="result"><b>Query : </b><i>abc def</i>
-                  <div class="form-horizontal pa__form">
-                    <div class="row">
-                      <div class="col-md-2"><b>Documents</b></div>
-                      <div class="col-md-8">
-                        <ol>
-                          <li>D1</li>
-                          <li>D2</li>
-                        </ol>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-2"><b>Precision</b></div>
-                      <div class="col-md-8">30</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-2"><b>Recall</b></div>
-                      <div class="col-md-8">30</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-2"><b>NIAP</b></div>
-                      <div class="col-md-8">30</div>
-                    </div>
-                  </div>
-                </li>
-              </ol>
+                </div>
+              </form>
+              <div id="loadSearch"></div>
             </div>
           </div>
         </div>
       </div>
-
       <footer class="footer-s">
         <div class="footer-s__container">
           <div class="footer-s--right">
@@ -133,5 +98,20 @@
     <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/miscellaneous.js"></script>
+
+<script>
+function load_interactive(){
+  $.get('interactive-searching.php').then(function(responseData) {
+    $('#loadSearch').html(responseData);
+  });
+}
+function load_experiment(){
+  $.get('experiment-searching.php').then(function(responseData) {
+    $('#loadSearch').html(responseData);
+  });
+}
+
+</script>
+
   </body>
 </html>

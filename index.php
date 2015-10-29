@@ -36,15 +36,15 @@
 
       <nav class="sidebar-s">
         <ul class="sidebar-s--divider">
-          <li><a href="index.html">
+          <li><a href="index.php">
             <i class="fa fa-home sidebar-s--icon-p"></i>
             Main Page
           </a></li>
-          <li><a href="indexing.html">
+          <li><a href="indexing.php">
             <i class="fa fa-leaf sidebar-s--icon-p"></i>
             Indexing
           </a></li>
-          <li><a href="searching.html">
+          <li><a href="searching.php">
             <i class="fa fa-search sidebar-s--icon-p"></i>
             Searching
           </a></li>
@@ -61,11 +61,11 @@
                 <div class="row perawatan__margin">
                   <div class="col-sm-6 text-center">
                     <img src="img/indexing.png" alt="Rawat Ternak" class="img-responsive center-block">
-                    <a class="btn btn-red btn-red-margin-p" href="indexing.html">Indexing</a>
+                    <a class="btn btn-red btn-red-margin-p" href="indexing.php">Indexing</a>
                   </div>
                   <div class="col-sm-6 text-center perawatan__margin-mobile">
                     <img src="img/searching.png" alt="Rawat Tanaman" class="img-responsive center-block">
-                    <a class="btn btn-red btn-red-margin-p" href="searching.html">Searching</a>
+                    <a class="btn btn-red btn-red-margin-p" href="searching.php">Searching</a>
                   </div>
                 </div>
               </div>

@@ -1,44 +1,19 @@
 var stemming = require('stem-porter');
 var fs  = require("fs");
 
-function InvertedFile(){
-	/*
-		this.documents = [
-			{no: 1, title: '', author: [], content: ''}, 
-			..., 
-			{no: n, title: '', author: [], content: ''}
-		];
-	*/
-	this.documents = [];
-	/*
-		this.file = [
-			{doc_number: 1, data: [{word: '', raw_tf: 0}]}, 
-			..., 
-			{doc_number: n, data: [{word: '', raw_tf: 1}]},
-		];
-	*/
+function QueryFile(idf){
+	this.queries = [];
 	this.file = [];
-	/*
-		this.stopwords = [w1, w2, ..., wn]
-	*/
-	this.stopwords = [];
-	/*
-		this.idf={
-			words: [w1, w2, ..., wn],
-			value: [idf1, idf2, ..., idfn]
-		}
-	*/
-	this.idf = {};
+	this.idf = idf;
 };
 
-InvertedFile.prototype.readDoc = function(file) {
+QueryFile.prototype.readQuery = function(file) {
 	var temp = [];
 	var reading = 'I';
 	var data = {
 		no: 0,
-		title: '',
-		author: [],
-		content: ''
+		content: '',
+		contents: ''
 	};
 	
 	fs.readFileSync(file).toString().split('\n').forEach(function (line) { 
@@ -48,37 +23,25 @@ InvertedFile.prototype.readDoc = function(file) {
 			}
 			data = {
 				no: line.slice(3),
-				title: '',
-				author: [],
-				content: ''
+				content: '',
+				contents: ''
 			};
 			reading = 'I';
-		}
-		else if(line.indexOf('.T') === 0){
-			reading = 'T';
-		}
-		else if(line.indexOf('.A') === 0){
-			reading = 'A';
 		}
 		else if(line.indexOf('.W') === 0){
 			reading = 'W';
 		}
 
-		if(reading === 'T' && line.indexOf('.T') !== 0){
-			data.title += line + ' ';
-		}
-		else if(reading === 'A' && line.indexOf('.A') !== 0){
-			data.author.push(line);
-		}
-		else if(reading === 'W' && line.indexOf('.W') !== 0){
+		if(reading === 'W' && line.indexOf('.W') !== 0){
 			data.content += line + ' ';
+			data.contents += line + ' ';
 		}
 	});
 	temp.push(data);
-	this.documents = temp;
+	this.queries = temp;
 };
 
-InvertedFile.prototype.readStopWord = function(file) {
+QueryFile.prototype.readStopWord = function(file) {
 	var temp = [];
 	fs.readFileSync(file).toString().split('\r\n').forEach(function (line) { 
 		temp.push(line);
@@ -87,49 +50,18 @@ InvertedFile.prototype.readStopWord = function(file) {
 	this.stopwords = temp;
 };
 
-InvertedFile.prototype.calculateIdf = function(){
-	var words = [];
-	var counter = [];
-	var value = [];
-	for(i in this.file){
-		var added = false;
-		var tempdata = this.file[i].data;
-		for (j in tempdata){
-			if(words.indexOf(tempdata[j].word) === -1){
-				words.push(tempdata[j].word);
-				counter.push(1);
-				added = true;
-			}
-			else{
-				if(!added){
-					counter[words.indexOf(tempdata[j].word)]++;
-					added = true;
-				}
-			}
-		}
-	}
-	
-	for(i in words){
-		value.push(Math.log(this.documents.length/counter[i]));
-	}
 
-	this.idf = {
-		words: words,
-		value: value
-	} 
-};
-
-InvertedFile.prototype.create = function(docFile, stopwordFile, dTF, dIDF, dNormal, dStem){
+QueryFile.prototype.create = function(queryFile, stopwordFile, dTF, dIDF, dNormal, dStem){
 	//read document file
-	this.readDoc(docFile);
+	this.readQuery(queryFile);
 	this.readStopWord(stopwordFile);
 
-	for(i in this.documents){
+	for(i in this.queries){
 		var datatemp = [];
 		var stemWords = [];
 
 		//Removing stopwords
-		words = this.removeStopwords(this.documents[i].content);
+		words = this.removeStopwords(this.queries[i].content);
 		if(dStem){
 			for(j in words){
 				stemWords.push(stemming(words[j]));
@@ -194,14 +126,14 @@ InvertedFile.prototype.create = function(docFile, stopwordFile, dTF, dIDF, dNorm
 		}
 
 		var doc = {
-			doc_number: this.documents[i].no,
-			data: datatemp
+			query_number: this.queries[i].no,
+			data: datatemp,
+			contents: this.queries[i].contents
 		}
 		this.file.push(doc);
 	}
 
 	if(dIDF){
-		this.calculateIdf();
 		this.updateWeight();
 	}
 
@@ -210,7 +142,7 @@ InvertedFile.prototype.create = function(docFile, stopwordFile, dTF, dIDF, dNorm
 	}
 };
 
-InvertedFile.prototype.updateNormal = function(){
+QueryFile.prototype.updateNormal = function(){
 	for(i in this.file){
 		var data = this.file[i].data;
 		//calculate length
@@ -226,17 +158,22 @@ InvertedFile.prototype.updateNormal = function(){
 	}
 }
 
-InvertedFile.prototype.updateWeight = function(){
+QueryFile.prototype.updateWeight = function(){
 	for(i in this.file){
 		var data = this.file[i].data;
 		for(j in data){
-			var idf = this.idf.value[this.idf.words.indexOf(data[j].word)]
-			data[j].weight *= idf;
+			if(this.idf.words.indexOf(data[j].word) == -1){
+				data[j].weight = 0;	
+			}
+			else{
+				var idf = this.idf.value[this.idf.words.indexOf(data[j].word)]
+				data[j].weight *= idf;
+			}
 		}
 	}
 }
 
-InvertedFile.prototype.removeStopwords = function(sentence){
+QueryFile.prototype.removeStopwords = function(sentence){
 	var temp = [];
 	var stop = this.stopwords;
 	sentence.split(" ").forEach(function (word) { 
@@ -249,4 +186,4 @@ InvertedFile.prototype.removeStopwords = function(sentence){
 	return temp;
 };
 
-module.exports = InvertedFile;
+module.exports = QueryFile;
