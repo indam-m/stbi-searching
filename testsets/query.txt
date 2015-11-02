@@ -1,3 +1,3 @@
 .I 0
 .W
-printed text into computer-ready form.
+Image recognition and any other methods of automatically                 transforming printed text into computer-ready form.

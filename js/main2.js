@@ -44,7 +44,7 @@ for(iQuery in qFile.file){
 				}
 			}
 		}
-		if(sim != 0){
+		if(sim > 0){
 			SC.push({doc_number: docFile[iDoc].doc_number, value: sim, title: docFile[iDoc].title});
 		}
 	}
