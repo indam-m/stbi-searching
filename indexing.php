@@ -125,7 +125,7 @@
                           </label><br>
                           <label>
                             <input type="radio" id="docIDF" name="docIDF" value="true">
-                            Using TF
+                            Using IDF
                           </label>
                         </div>
                       </div>
@@ -201,7 +201,7 @@
                           </label><br>
                           <label>
                             <input type="radio" id="queryIDF" name="queryIDF" value="true">
-                            Using TF
+                            Using IDF
                           </label>
                         </div>
                       </div>
