@@ -67,7 +67,7 @@ function get_qRels(file) {
 
 var qRels = get_qRels(qrelsFile);
 
-var av_recall = 0, av_precision = 0, av_niap = 0, n_query = 0;
+var av_recall = 0, av_precision = 0, av_niap = 0, n_query = 0, n_query_recall = 0, n_query_niap = 0;
 
 var query_rank = {data : [], averages: {precision: 0, recall: 0, niap: 0}};
 
@@ -161,11 +161,19 @@ for(iQuery in qFile.file){
 	var recall = count_recall(qFile.file[iQuery].query_number, rank);
 	var niap = count_niap(qFile.file[iQuery].query_number, rank);
 
-	if(precision != null){
+	if(precision){
 		av_precision += precision;
-		av_recall += recall;
-		av_niap += niap;
 		n_query++;
+	}
+
+	if(recall){
+		av_recall += recall;
+		n_query_recall++;
+	}
+
+	if(niap){
+		av_niap += niap;
+		n_query_niap++;
 	}
 
 	query_rank['data'].push({query: qFile.file[iQuery].contents, rank: rank, 
@@ -173,7 +181,7 @@ for(iQuery in qFile.file){
 
 }
 
-query_rank['averages'] = {precision: av_precision/n_query, recall: av_recall/n_query, niap: av_niap/n_query};
+query_rank['averages'] = {precision: av_precision/n_query, recall: av_recall/n_query_recall, niap: av_niap/n_query_niap};
 
 var outputFilename = abs_path + 'js/test3.json';
 
