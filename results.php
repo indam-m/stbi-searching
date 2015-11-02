@@ -1,15 +1,10 @@
 <?php
-$abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/';
+$abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
 
-// $document = $_GET['document'];
-// $query = $_GET['query'];
-// $relevance = $_GET['relevance'];
-// $stopword = $_GET['stopword'];
-
-$document = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all';
-$query = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text';
-$relevance = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text';
-$stopword = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt';
+// $document = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/cisi.all';
+// $query = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/query.text';
+// $relevance = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/qrels.text';
+// $stopword = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt';
 
 $docTF = $_GET['docTF'];
 $docIDF = $_GET['docIDF'];
@@ -29,6 +24,7 @@ exec($command);
 $string = file_get_contents("js/test3.json");
 $output = json_decode($string);
 $results = $output->data;
+$averages = $output->averages;
 
 ?>
 
@@ -90,6 +86,24 @@ $results = $output->data;
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-7 grid-center pa__box">
+              <div class="result">
+                <div class="pa--heading">
+                  Averages
+                </div>
+                <div class="row">
+                  <div class="col-md-5"><b>Precision</b></div>
+                  <div class="col-md-5"><?php echo $averages->precision; ?></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5"><b>Recall</b></div>
+                  <div class="col-md-5"><?php echo $averages->recall; ?></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5"><b>Non-Interpolated Average Precision</b></div>
+                  <div class="col-md-5"><?php echo $averages->niap; ?></div>
+                </div>
+              </div>
+
               <div class="pa--heading">
                 Searching Results
               </div>

@@ -63,6 +63,9 @@ InvertedFile.prototype.readDoc = function(file) {
 		else if(line.indexOf('.W') === 0){
 			reading = 'W';
 		}
+		else if(line.indexOf('.X') === 0){
+			reading = 'X';
+		}
 
 		if(reading === 'T' && line.indexOf('.T') !== 0){
 			data.title += line + ' ';
@@ -195,6 +198,7 @@ InvertedFile.prototype.create = function(docFile, stopwordFile, dTF, dIDF, dNorm
 
 		var doc = {
 			doc_number: this.documents[i].no,
+			title: this.documents[i].title,
 			data: datatemp
 		}
 		this.file.push(doc);
@@ -238,10 +242,14 @@ InvertedFile.prototype.updateWeight = function(){
 
 InvertedFile.prototype.removeStopwords = function(sentence){
 	var temp = [];
+	var symbols = ['`', '-', '=', '+', '_', ')', '(', '*', '&', '^', '%', '$', '#', '@', '!', '~', '\\', ']', '[', '{', '}', '|', '\'', ';', ':', '"', '/', '.', ',', '<', '>', '?'];
 	var stop = this.stopwords;
 	sentence.split(" ").forEach(function (word) { 
-		word = word.replace('-', '~','!','@','#','$','%','^','&','*','(',')','_','+','`','{','}','|','[',']','\\',':','"',';','\'','<','>','?',',','/','.',' ');
 		word = word.toLowerCase();
+		for(x in symbols){
+			word = word.replace(symbols[x], '');
+		}	
+		
 		if(stop.indexOf(word) == -1 && word != ''){
 			temp.push(word);
 		}

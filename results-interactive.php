@@ -1,13 +1,15 @@
 <?php
 $abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
-$command = '/usr/local/bin/node '.$abs_path.'js/main.js';
-$query = $_GET['query'];
-$string = file_get_contents("js/test2.json");
+$query_raw = $_GET['query'];
+$query = str_replace(' ', '~', $query_raw);
+$command = '/usr/local/bin/node '.$abs_path.'js/main2.js ' . $query;
+// $command = '/usr/local/bin/node '.$abs_path.'js/main2.js';
+exec($command);
+
+$string = file_get_contents("js/interactive_result.json");
 $output = json_decode($string);
 $sum = $output->sum;
 $rank = $output->rank;
-exec($command);
-echo $command;
 ?>
 
 <!DOCTYPE html>
@@ -73,12 +75,12 @@ echo $command;
               </div>
               <br>
               <?php echo'
-              <div class="pa--heading2">Results of <i>'.$query.'</i></div>
+              <div class="pa--heading2">Results of <i>'.$query_raw.'</i></div>
               <b>Found : '.$sum.'</b>
               <ol>';
               foreach($rank as $row){
                 echo '<li>
-                  <div class="form-horizontal pa__form">'.$row.'</div>
+                  <div class="form-horizontal pa__form">'.$row[0].' - '.$row[1].'</div>
                 </li>';
               }
               ?>

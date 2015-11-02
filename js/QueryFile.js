@@ -175,10 +175,13 @@ QueryFile.prototype.updateWeight = function(){
 
 QueryFile.prototype.removeStopwords = function(sentence){
 	var temp = [];
+	var symbols = ['`', '-', '=', '+', '_', ')', '(', '*', '&', '^', '%', '$', '#', '@', '!', '~', '\\', ']', '[', '{', '}', '|', '\'', ';', ':', '"', '/', '.', ',', '<', '>', '?'];
 	var stop = this.stopwords;
 	sentence.split(" ").forEach(function (word) { 
-		word = word.replace('-', '~','!','@','#','$','%','^','&','*','(',')','_','+','`','{','}','|','[',']','\\',':','"',';','\'','<','>','?',',','/','.',' ');
 		word = word.toLowerCase();
+		for(x in symbols){
+			word = word.replace(symbols[x], '');
+		}	
 		if(stop.indexOf(word) == -1 && word != ''){
 			temp.push(word);
 		}

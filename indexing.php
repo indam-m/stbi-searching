@@ -63,25 +63,25 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label">Document Location</label>
                   <div class="col-md-7">
-                    <input type="text" id="document" name="document">
+                    <input class="form-control" type="text" id="document" name="document">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-4 control-label">Query Location</label>
                   <div class="col-md-7">
-                    <input type="text" id="query" name="query">
+                    <input class="form-control" type="text" id="query" name="query">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-4 control-label">Relevance Judgement</label>
                   <div class="col-md-7">
-                    <input type="text" id="relevance" name="relevance">
+                    <input class="form-control" type="text" id="relevance" name="relevance">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-4 control-label">Stopword Location</label>
                   <div class="col-md-7">
-                    <input type="text" id="stopword" name="stopword">
+                    <input class="form-control" type="text" id="stopword" name="stopword">
                   </div>
                 </div>
 
@@ -93,7 +93,7 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="docTF" name="docTF" value="no" checked>
+                            <input type="radio" id="docTF" name="docTF" value="binary" checked>
                             No TF
                           </label><br>
                           <label>
@@ -169,7 +169,7 @@
                       <div class="col-md-7">
                         <div class="radio">
                           <label>
-                            <input type="radio" id="queryTF" name="queryTF" value="no" checked>
+                            <input type="radio" id="queryTF" name="queryTF" value="binary" checked>
                             No TF
                           </label><br>
                           <label>

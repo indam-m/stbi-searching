@@ -1,6 +1,9 @@
 <?php
 
-exec('node js/main.js >/dev/null 2>&1 &');
+$document = str_replace('%2F', '/', $_GET['document']);
+$query = str_replace('%2F', '/', $_GET['query']);;
+$relevance = str_replace('%2F', '/', $_GET['relevance']);;
+$stopword = str_replace('%2F', '/', $_GET['stopword']);;
 
 $document = $_POST['document'];
 $query = $_POST['query'];

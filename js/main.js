@@ -8,10 +8,11 @@ var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
 // file.readFile('../testsets/ADI/adi.all');
 //node lala.js document query relevance stopword docTF docIDF docNormalisation docStemming qTF qIDF qNormalisation qStemming
 
-// var docURL = abs_path + 'testsets/ADI/adi.all';
-// var queryURL = abs_path + 'testsets/ADI/query.text';
-// var qrelsFile = abs_path + 'testsets/ADI/qrels.text';
+// var docURL = abs_path + 'testsets/CISI/cisi.all';
+// var queryURL = abs_path + 'testsets/CISI/query.text';
+// var qrelsFile = abs_path + 'testsets/CISI/qrels.text';
 // var stopwordFile = abs_path + 'testsets/stopWord.txt';
+var jsonfile = require('jsonfile');
 
 var docURL = process.argv[2];
 var queryURL = process.argv[3];
@@ -28,20 +29,41 @@ var dIDF = process.argv[7];
 var dNormal = process.argv[8];
 var dStem = process.argv[9];
 
+var qTF = process.argv[10];
+var qIDF = process.argv[11];
+var qNormal = process.argv[12];
+var qStem = process.argv[13];
+
+var setting = {
+	TF: dTF,
+	IDF: dIDF,
+	Normal: dNormal,
+	Stem: dStem
+}
+
+jsonfile.writeFileSync(abs_path + 'js/setting.json', setting, {throws:false});
+
 //Buat inverted file dokumen
 var docFile = new invertedFile();
 docFile.create(docURL, stopwordFile, dTF, dIDF, dNormal, dStem);
-    
+jsonfile.writeFileSync(abs_path + 'js/idf.json', docFile.idf, {throws:false});
+
 //Ngitung bobot kata tiap query
 var qFile = new queryFile(docFile.idf);
-qFile.create(queryURL, stopwordFile, dTF, dIDF, dNormal, dStem);
+qFile.create(queryURL, stopwordFile, qTF, qIDF, qNormal, qStem);
 
 function get_qRels(file) {
 	var temp = {};
 	
 	fs.readFileSync(file).toString().split('\n').forEach(function (line) {
 		if(line.length > 0){
-			var ltemp = line.split('   ');
+			var ltemp;
+
+			if(line.indexOf('   ') > -1)
+				ltemp = line.split('   ');
+			else
+				ltemp = line.split(' ');
+
 			var l0 = ltemp[0].toString();
 			var l1 = ltemp[1].toString();
 			var check = false;
@@ -58,52 +80,65 @@ function get_qRels(file) {
 
 var qRels = get_qRels(qrelsFile);
 
-var query_rank = {data : []};
+var av_recall = 0, av_precision = 0, av_niap = 0, n_query = 0;
 
-function count_precision(q_no, dFound){
-	var nr_found = 0, n_found = 0;
-	// var qn = q_no.toString();
-	// for(d in dFound){
-	// 	if(typeof qn[d.toString()] === 'undefined')
-	// 		nr_found++;
-	// 	n_found++;
-	// }
-	if(n_found == 0)
-		return 0;
-	else
-		return nr_found/n_found;
-}
+var query_rank = {data : [], averages: {precision: 0, recall: 0, niap: 0}};
 
-function count_recall(q_no, dFound){
+function count_precision(q_number, dFound){
 	var nr_found = 0;
-	var qn = q_no.toString();
-	var nr_total = 0;
-	// for(d in dFound){
-	// 	if(typeof qn[d.toString()] === 'undefined')
-	// 		nr_found++;
-	// }
-	// for(a in qRels[qn])
-	// 	nr_total++;
-	if(nr_total == 0)
-		return 0;
+	var qn = q_number.toString();
+	if(qRels[qn]){
+		var qRelsn = qRels[qn];
+		for(d in dFound){
+			if(qRelsn.indexOf(dFound[d]) > -1)
+				nr_found++;
+		}
+		if(dFound.length == 0)
+			return 0;
+		else
+			return nr_found/dFound.length;
+	}
 	else
-		return nr_found/nr_total;
+		return null;
 }
 
-function count_niap(q_no, dFound){
-	var nr_ = 0, nr_found = 0, n_found = 0;
-	var qn = q_no.toString();
-	// for(d in dFound){
-	// 	n_found++;
-	// 	if(typeof qn[d.toString()] === 'undefined'){
-	// 		nr_found++;
-	// 		nr_ += nr_found/n_found;
-	// 	}
-	// }
-	if(nr_found == 0)
-		return 0;
+function count_recall(q_number, dFound){
+	var nr_found = 0;
+	var qn = q_number.toString();
+	if(qRels[qn]){
+		var qRelsn = qRels[qn];
+		for(d in dFound){
+			if(qRelsn.indexOf(dFound[d]) > -1)
+				nr_found++;
+		}
+		if(dFound.length == 0)
+			return 0;
+		else
+			return nr_found/qRelsn.length;
+	}
 	else
-		return nr_/nr_found;
+		return null;
+}
+
+function count_niap(q_number, dFound){
+	var nr_ = 0, nr_found = 0, n_found = 0;
+	var qn = q_number.toString();
+	if(qRels[qn]){
+		var qRelsn = qRels[qn];
+		for(d in dFound){
+			n_found++;
+			if(qRelsn.indexOf(dFound[d]) > -1){
+				nr_found++;
+				nr_ += nr_found/n_found;
+			}
+		}
+		if(dFound.length == 0)
+			return 0;
+		else
+			return nr_/nr_found;
+	}
+	else
+		return null;
 }
 
 for(iQuery in qFile.file){
@@ -135,10 +170,23 @@ for(iQuery in qFile.file){
 		console.log(SC[x].doc_number);
 		rank.push(SC[x].doc_number);
 	}
+	var precision = count_precision(qFile.file[iQuery].query_number, rank);
+	var recall = count_recall(qFile.file[iQuery].query_number, rank);
+	var niap = count_niap(qFile.file[iQuery].query_number, rank);
+
+	if(precision != null){
+		av_precision += precision;
+		av_recall += recall;
+		av_niap += niap;
+		n_query++;
+	}
+
 	query_rank['data'].push({query: qFile.file[iQuery].contents, rank: rank, 
-		precision: count_precision(iQuery, rank), recall: count_recall(iQuery, rank), niap: count_niap(iQuery, rank)});
+		precision: precision, recall: recall, niap: niap});
 
 }
+
+query_rank['averages'] = {precision: av_precision/n_query, recall: av_recall/n_query, niap: av_niap/n_query};
 
 var outputFilename = abs_path + 'js/test3.json';
 
