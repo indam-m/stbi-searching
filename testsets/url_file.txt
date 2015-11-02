@@ -1,0 +1,9 @@
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text
+
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/cisi.all
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/query.text
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/qrels.text
+
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt

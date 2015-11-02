@@ -4,25 +4,12 @@ var fs = require('fs');
 
 var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
 
-// file.readFile('../testsets/CISI/cisi.all');
-// file.readFile('../testsets/ADI/adi.all');
-//node lala.js document query relevance stopword docTF docIDF docNormalisation docStemming qTF qIDF qNormalisation qStemming
-
-// var docURL = abs_path + 'testsets/CISI/cisi.all';
-// var queryURL = abs_path + 'testsets/CISI/query.text';
-// var qrelsFile = abs_path + 'testsets/CISI/qrels.text';
-// var stopwordFile = abs_path + 'testsets/stopWord.txt';
 var jsonfile = require('jsonfile');
 
 var docURL = process.argv[2];
 var queryURL = process.argv[3];
 var qrelsFile = process.argv[4];
 var stopwordFile = process.argv[5];
-
-// var dTF = 'aug'; //raw/aug/log/binary
-// var dIDF = true; //true/false
-// var dNormal = false; //true/false
-// var dStem = false; //true/false/
 
 var dTF = process.argv[6];
 var dIDF = process.argv[7];
