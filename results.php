@@ -1,10 +1,10 @@
 <?php
 $abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
 
-// $document = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/cisi.all';
-// $query = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/query.text';
-// $relevance = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/qrels.text';
-// $stopword = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt';
+$document = str_replace('%2F', '/', $_GET['document']);
+$query = str_replace('%2F', '/', $_GET['query']);;
+$relevance = str_replace('%2F', '/', $_GET['relevance']);;
+$stopword = str_replace('%2F', '/', $_GET['stopword']);;
 
 $docTF = $_GET['docTF'];
 $docIDF = $_GET['docIDF'];

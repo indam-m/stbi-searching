@@ -1,9 +1,9 @@
 <?php
 
 $document = str_replace('%2F', '/', $_GET['document']);
-$query = str_replace('%2F', '/', $_GET['query']);;
-$relevance = str_replace('%2F', '/', $_GET['relevance']);;
-$stopword = str_replace('%2F', '/', $_GET['stopword']);;
+$query = str_replace('%2F', '/', $_GET['query']);
+$relevance = str_replace('%2F', '/', $_GET['relevance']);
+$stopword = str_replace('%2F', '/', $_GET['stopword']);
 
 $document = $_POST['document'];
 $query = $_POST['query'];
