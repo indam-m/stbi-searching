@@ -201,3 +201,28 @@ fs.writeFile(outputFilename, JSON.stringify(query_rank, null, 4), function(err) 
     }
 });
 
+var invTemp = [];
+for(i in docFile.file){
+	var doc = docFile.file[i]
+	for(j in doc.data){
+		var data = '';
+		data += doc.data[j].word + '\t\t' + doc.doc_number + '\t\t' + doc.data[j].weight + '\n';
+		invTemp.push(data);
+	}
+}
+
+invTemp.sort();
+
+var stringTemp = '';
+
+for(i in invTemp){
+	stringTemp += invTemp[i];
+}
+
+fs.writeFile(abs_path + 'js/invertedFile.txt', stringTemp, function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('Inverted file saved to js/invertedFile.txt');
+    }
+});
