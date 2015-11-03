@@ -203,9 +203,8 @@ InvertedFile.prototype.create = function(docFile, stopwordFile, dTF, dIDF, dNorm
 		}
 		this.file.push(doc);
 	}
-
+	this.calculateIdf();
 	if(dIDF){
-		this.calculateIdf();
 		this.updateWeight();
 	}
 

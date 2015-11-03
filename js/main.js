@@ -12,14 +12,14 @@ var qrelsFile = process.argv[4];
 var stopwordFile = process.argv[5];
 
 var dTF = process.argv[6];
-var dIDF = process.argv[7];
-var dNormal = process.argv[8];
-var dStem = process.argv[9];
+var dIDF = (process.argv[7] === 'true');
+var dNormal = (process.argv[8] === 'true');
+var dStem = (process.argv[9] === 'true');
 
 var qTF = process.argv[10];
-var qIDF = process.argv[11];
-var qNormal = process.argv[12];
-var qStem = process.argv[13];
+var qIDF = (process.argv[11] === 'true');
+var qNormal = (process.argv[12] === 'true');
+var qStem = (process.argv[13] === 'true');
 
 var setting = {
 	TF: dTF,
@@ -119,10 +119,10 @@ function count_niap(q_number, dFound){
 				nr_ += nr_found/n_found;
 			}
 		}
-		if(dFound.length == 0)
+		if(nr_found == 0)
 			return 0;
 		else
-			return nr_/nr_found;
+			return nr_/qRelsn.length;
 	}
 	else
 		return null;
@@ -201,31 +201,3 @@ fs.writeFile(outputFilename, JSON.stringify(query_rank, null, 4), function(err) 
     }
 });
 
-var exp_url = abs_path + 'testsets/experimentADI' + dTF + dIDF + dNormal + dStem + qTF + qIDF + qNormal + qStem + '.txt';
-
-function writeExperiment(){
-	var content = 'Document Settings\n';
-	content += 'TF\t'+dTF+'\n';
-	content += 'IDF\t'+dIDF+'\n';
-	content += 'Normalisation\t'+dNormal+'\n';
-	content += 'Stemming\t'+dStem+'\n\n';
-	content += 'Query Settings\n';
-	content += 'TF\t'+qTF+'\n';
-	content += 'IDF\t'+qIDF+'\n';
-	content += 'Normalisation\t'+qNormal+'\n';
-	content += 'Stemming\t'+qStem+'\n\n';
-	content += 'Averages\n';
-	content += 'Precision\t' + query_rank['averages']['precision'] + '\n';
-	content += 'Recall\t' + query_rank['averages']['recall'] + '\n';
-	content += 'Non-interpolated Average Precision\t' + query_rank['averages']['niap'] + '\n\n';
-	var data = query_rank['data'];
-	for(r in data){
-		content += data[r]['number'] + '\t';
-		content += data[r]['precision'] + '\t';
-		content += data[r]['recall'] + '\t';
-		content += data[r]['niap'] + '\n';
-	}
-	return content;
-}
-
-fs.writeFileSync(exp_url, writeExperiment());
