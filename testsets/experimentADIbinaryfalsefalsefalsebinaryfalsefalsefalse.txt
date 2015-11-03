@@ -1,7 +1,14 @@
-TF	No TF
-IDF	No IDF
-Normalisation	No Normalisation
-Stemming	No Stemming
+Document Settings
+TF	binary
+IDF	false
+Normalisation	false
+Stemming	false
+
+Query Settings
+TF	binary
+IDF	false
+Normalisation	false
+Stemming	false
 
 Averages
 Precision	0.17156384613883466

@@ -204,10 +204,16 @@ fs.writeFile(outputFilename, JSON.stringify(query_rank, null, 4), function(err) 
 var exp_url = abs_path + 'testsets/experimentADI' + dTF + dIDF + dNormal + dStem + qTF + qIDF + qNormal + qStem + '.txt';
 
 function writeExperiment(){
-	var content = 'TF\tNo TF\n';
-	content += 'IDF\tNo IDF\n';
-	content += 'Normalisation\tNo Normalisation\n';
-	content += 'Stemming\tNo Stemming\n\n';
+	var content = 'Document Settings\n';
+	content += 'TF\t'+dTF+'\n';
+	content += 'IDF\t'+dIDF+'\n';
+	content += 'Normalisation\t'+dNormal+'\n';
+	content += 'Stemming\t'+dStem+'\n\n';
+	content += 'Query Settings\n';
+	content += 'TF\t'+qTF+'\n';
+	content += 'IDF\t'+qIDF+'\n';
+	content += 'Normalisation\t'+qNormal+'\n';
+	content += 'Stemming\t'+qStem+'\n\n';
 	content += 'Averages\n';
 	content += 'Precision\t' + query_rank['averages']['precision'] + '\n';
 	content += 'Recall\t' + query_rank['averages']['recall'] + '\n';
