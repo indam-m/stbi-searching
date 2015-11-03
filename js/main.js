@@ -201,7 +201,7 @@ fs.writeFile(outputFilename, JSON.stringify(query_rank, null, 4), function(err) 
     }
 });
 
-var exp_url = abs_path + 'testsets/experimentADINoNoNoNoNoNoNoNo.txt';
+var exp_url = abs_path + 'testsets/experimentADI' + dTF + dIDF + dNormal + dStem + qTF + qIDF + qNormal + qStem + '.txt';
 
 function writeExperiment(){
 	var content = 'TF\tNo TF\n';
