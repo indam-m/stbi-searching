@@ -176,7 +176,7 @@ for(iQuery in qFile.file){
 		n_query_niap++;
 	}
 
-	query_rank['data'].push({query: qFile.file[iQuery].contents, rank: rank, 
+	query_rank['data'].push({number: qFile.file[iQuery].query_number, query: qFile.file[iQuery].contents, rank: rank, 
 		precision: precision, recall: recall, niap: niap});
 
 }
@@ -200,3 +200,26 @@ fs.writeFile(outputFilename, JSON.stringify(query_rank, null, 4), function(err) 
       console.log("JSON saved to " + outputFilename);
     }
 });
+
+var exp_url = abs_path + 'testsets/experimentADINoNoNoNoNoNoNoNo.txt';
+
+function writeExperiment(){
+	var content = 'TF\tNo TF\n';
+	content += 'IDF\tNo IDF\n';
+	content += 'Normalisation\tNo Normalisation\n';
+	content += 'Stemming\tNo Stemming\n\n';
+	content += 'Averages\n';
+	content += 'Precision\t' + query_rank['averages']['precision'] + '\n';
+	content += 'Recall\t' + query_rank['averages']['recall'] + '\n';
+	content += 'Non-interpolated Average Precision\t' + query_rank['averages']['niap'] + '\n\n';
+	var data = query_rank['data'];
+	for(r in data){
+		content += data[r]['number'] + '\t';
+		content += data[r]['precision'] + '\t';
+		content += data[r]['recall'] + '\t';
+		content += data[r]['niap'] + '\n';
+	}
+	return content;
+}
+
+fs.writeFileSync(exp_url, writeExperiment());
