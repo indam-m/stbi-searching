@@ -77,14 +77,24 @@ $rank = $output->rank;
               <?php echo'
               <div class="pa--heading2">Results of <i>'.$query_raw.'</i></div>
               <b>Found : '.$sum.'</b>
+              <form action="results-feedback.php" method="post" class="form-horizontal pa__form">
+              <div class="form-group">
               <ol>';
               foreach($rank as $row){
-                echo '<li>
-                  <div class="form-horizontal pa__form">'.$row[0].' - '.$row[1].'</div>
+                echo '
+                <li class="padding-li">
+                  <input class="form-horizontal pa__form" type="checkbox" name="reljud[]" value='.$row[0].'></input>&nbsp;&nbsp;&nbsp;'.$row[0].' - '.$row[1].'
                 </li>';
               }
               ?>
               </ol>
+            </div>
+                <div class="form-group">
+                  <div class="col-md-11 pa__btn-container-form">
+                    <input type="submit" class="btn btn-tosca btn-margin-bottom" value="Searching"></input>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

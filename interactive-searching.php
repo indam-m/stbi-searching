@@ -1,5 +1,16 @@
 <form class="form-horizontal pa__form" action="results-interactive.php">
 	<div class="form-group">
+    <label class="col-md-4 control-label">Algorithm</label>
+    <div class="col-md-7">
+      <select id="algorithm" class="form-control">
+        <option value="rocchio">Rocchio</option>
+        <option value="idereg">Ide Regular</option>
+        <option value="idedechi">Ide dec Hi</option>
+        <option value="pseudo">Pseudo Relevance Feedback</option>
+      </select>
+    </div>
+  </div>
+	<div class="form-group">
 	  <label class="col-md-4 control-label">Query</label>
 	  <div class="col-md-7">
 	    <input class="form-control" type="text" id="query" name="query"></input>

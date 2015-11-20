@@ -784,3 +784,8 @@ ul.timeline > li > .timeline-panel:after {
 @media (max-width: 991px) {
   .t--p {
     margin-top: 18px; } }
+
+.padding-li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
