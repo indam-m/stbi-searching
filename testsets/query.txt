@@ -1,3 +1,0 @@
-.I 0
-.W
-utomatically retrieving articles from approximate titles
