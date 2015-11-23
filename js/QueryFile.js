@@ -1,5 +1,6 @@
 var stemming = require('stem-porter');
 var fs  = require("fs");
+var jsonfile = require('jsonfile');
 
 function QueryFile(idf){
 	this.queries = [];
@@ -140,6 +141,9 @@ QueryFile.prototype.create = function(queryFile, stopwordFile, dTF, dIDF, dNorma
 	if(dNormal){
 		this.updateNormal();
 	}
+
+	var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
+	jsonfile.writeFileSync(abs_path + 'js/queryWeight.json', this.file, {throws:false});
 };
 
 QueryFile.prototype.updateNormal = function(){

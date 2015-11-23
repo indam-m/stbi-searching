@@ -246,7 +246,7 @@ InvertedFile.prototype.removeStopwords = function(sentence){
 	sentence.split(" ").forEach(function (word) { 
 		word = word.toLowerCase();
 		for(x in symbols){
-			word = word.replace(symbols[x], '');
+			word = word.replace(/[^a-zA-Z0-9 ]/g, "")
 		}	
 		
 		if(stop.indexOf(word) == -1 && word != ''){
