@@ -123,9 +123,11 @@ RelevanceFeedback.prototype.countUpdate = function(){
 RelevanceFeedback.prototype.getDistinctWords = function(){
 	for(i in this.invertedFile){
 		var data = this.invertedFile[i].data;
-		for(j in data){
-			if(this.words.indexOf(data[j].word) == -1){
-				this.words.push(data[j].word);
+		if(this.relevant.indexOf(this.invertedFile[i].doc_number) > -1 || this.irrelevant.indexOf(this.invertedFile[i].doc_number) > -1){
+			for(j in data){
+				if(this.words.indexOf(data[j].word) == -1){
+					this.words.push(data[j].word);
+				}
 			}
 		}
 	}
