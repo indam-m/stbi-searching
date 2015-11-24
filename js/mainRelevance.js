@@ -24,7 +24,7 @@ function MainRelevance(rDocs, irDocs, algo, sameDocs, s, qExpand){
 				break;
 			}
 		}
-		var temp = new relevance(invertedFile, allQuery[i], relevantDocs[idx],irrelevantDocs[idx],algorithm,expand);	
+		var temp = new relevance(invertedFile, allQuery[i], relevantDocs[idx].docs,irrelevantDocs[idx].docs,algorithm,expand);	
 		newQueries.push(temp);
 	}
 	jsonfile.writeFileSync(abs_path + 'js/newQueryWeight.json', newQueries, {throws:false});

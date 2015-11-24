@@ -43,6 +43,8 @@ irrelevantDoc = {
 relevantDocs.push(relevantDoc);
 irrelevantDocs.push(irrelevantDoc);	
 
+
+
 var test = {
 	algorithm: algorithm,
 	usdc: usdc,
@@ -82,12 +84,26 @@ for(iQuery in newQuery){
 
 	var rank = [];
 	var count = 0;
-	for (x in SC){
-		count += 1;
-		console.log(SC[x].doc_number);
-		rank.push([SC[x].doc_number, SC[x].title]);
-		if(count >= topS){
-			break;
+	if(usdc){
+		for (x in SC){
+			count += 1;
+			console.log(SC[x].doc_number);
+			rank.push([SC[x].doc_number, SC[x].title]);
+			if(count >= topS){
+				break;
+			}
+		}	
+	}
+	else{
+		for (x in SC){
+			if(_allDocs.indexOf(SC[x].doc_number) == -1){
+				count += 1;
+				console.log(SC[x].doc_number);
+				rank.push([SC[x].doc_number, SC[x].title]);
+				if(count >= topS){
+					break;
+				}
+			}
 		}
 	}
 }
