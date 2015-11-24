@@ -23,9 +23,6 @@ $docsetting = $docTF . ' ' . $docIDF . ' ' . $docNormalisation . ' ' . $docStemm
 $querysetting = $queryTF . ' ' . $queryIDF . ' ' . $queryNormalisation . ' ' . $queryStemming;
 
 $command = '/usr/local/bin/node '.$abs_path.'js/main.js '.$document.' '.$query.' '.$relevance.' '.$stopword.' '.$docsetting.' '.$querysetting.' '.$algo.' '.$usdc.' '.$topS.' '.$qExp;
-if($algo == 'pseudo')
-  $command = $command . ' ' . $_GET['topNs'];
-
 
 exec($command);
 
@@ -116,10 +113,36 @@ $averages = $output->averages;
                 Searching Results
               </div>
               <ol>
-                <?php 
+                <?php
                 foreach($results as $res){
                   echo'
                   <li class="result"><b>Query : </b><i>'.$res->query.'</i>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <b> Old Query </b>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>Word(s)</th>
+                            <th>Weight</th>
+                          </tr>
+                          <tr>
+                            <td>Hahi</td><td>20</td><br>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="col-md-6">
+                        <b> New Query </b>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>Word(s)</th>
+                            <th>Weight</th>
+                          </tr>
+                          <tr>
+                            <td>Hahi</td><td>20</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                     <div class="form-horizontal pa__form">
                       <div class="row">
                         <div class="col-md-2"><b>Documents</b></div>

@@ -44,10 +44,6 @@ QueryFile.prototype.readQuery = function(file) {
 		else if (line.indexOf('.C') === 0){
 			reading = 'X';
 		}
-<<<<<<< HEAD
-
-=======
->>>>>>> 669599bb3cc3432036d2b678649488b54d981bc8
 
 		if(reading === 'W' && line.indexOf('.W') !== 0){
 			data.content += line + ' ';

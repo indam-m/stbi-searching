@@ -20,6 +20,7 @@ var qTF = process.argv[10];
 var qIDF = (process.argv[11] === 'true');
 var qNormal = (process.argv[12] === 'true');
 var qStem = (process.argv[13] === 'true');
+var topS = process.argv[14];
 
 var setting = {
 	TF: dTF,
@@ -153,9 +154,14 @@ for(iQuery in qFile.file){
 
 	var rank = [];
 
+	var count = 0;
 	for (x in SC){
+		count += 1;
 		console.log(SC[x].doc_number);
 		rank.push(SC[x].doc_number);
+		if(count >= topS){
+			break;
+		}
 	}
 	var precision = count_precision(qFile.file[iQuery].query_number, rank);
 	var recall = count_recall(qFile.file[iQuery].query_number, rank);
