@@ -137,7 +137,6 @@ $secondR = json_decode(file_get_contents("js/2ndRetreive.json"));
 
               <div class="pa--heading">
                 Searching Results
-                <?php echo $command; ?>
               </div>
               <ol>
                 <?php
