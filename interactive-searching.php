@@ -8,11 +8,11 @@
 	<div class="form-group">
     <label class="col-md-4 control-label">Algorithm</label>
     <div class="col-md-7">
-      <select id="algorithm" class="form-control" onChange="load_topN();">
-        <option value="rocchio">Rocchio</option>
-        <option value="regular">Ide Regular</option>
-        <option value="dechi">Ide dec Hi</option>
-        <option value="pseudo">Pseudo Relevance Feedback</option>
+      <select name="algorithm" id="algorithm" class="form-control" onChange="load_topN();">
+        <option name="algorithm" name="algorithm" value="rocchio">Rocchio</option>
+        <option name="algorithm" value="regular">Ide Regular</option>
+        <option name="algorithm" value="dechi">Ide dec Hi</option>
+        <option name="algorithm" value="pseudo">Pseudo Relevance Feedback</option>
       </select>
     </div>
   </div>

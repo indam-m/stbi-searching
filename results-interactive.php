@@ -10,8 +10,7 @@ if($algorithm == 'pseudo')
 
 $query_raw = $_GET['query'];
 $query = str_replace(' ', '~', $query_raw);
-$command = '/usr/local/bin/node '.$abs_path.'js/main2.js ' . $query;
-// $command = '/usr/local/bin/node '.$abs_path.'js/main2.js';
+$command = '/usr/local/bin/node '.$abs_path.'js/main2.js ' . $query . ' ' . $topS;
 exec($command);
 
 $string = file_get_contents("js/interactive_result.json");
@@ -90,19 +89,38 @@ $rank = $output->rank;
               echo'
               <div class="pa--heading2">Results of <i>'.$query_raw.'</i></div>
               <b>Found : '.$sum.'</b>
-              <form action="results-feedback.php" method="post" class="form-horizontal pa__form">
+              <form action="results-feedback-interactive.php" method="post" class="form-horizontal pa__form">
               <input type="hidden" name="documents" value="'.$documents.'">
               <input type="hidden" name="algorithm" value="'.$algorithm.'">
               <input type="hidden" name="topS" value="'.$topS.'">
               <input type="hidden" name="topN" value="'.$topN.'">
               <input type="hidden" name="qExp" value="'.$qExp.'">
               <input type="hidden" name="usdc" value="'.$usdc.'">
+              <input type="hidden" name="query" value="'.$query.'">
               <ol>';
+              $i=0;
               foreach($rank as $row){
-                echo '
-                <li class="padding-li">
-                  <input class="form-horizontal pa__form" type="checkbox" name="reljud[]" value='.$row[0].'></input>&nbsp;&nbsp;&nbsp;'.$row[0].' - '.$row[1].'
-                </li>';
+                if($algorithm == 'pseudo'){
+                  $i++;
+                  if($i<=$topN){
+                    echo '
+                    <li class="padding-li">
+                      <input class="form-horizontal pa__form" type="checkbox" name="reljud[]" value='.$row[0].'  checked></input>&nbsp;&nbsp;&nbsp;'.$row[0].' - '.$row[1].'
+                    </li>';
+                  }
+                  else{
+                    echo '
+                  <li class="padding-li">
+                    <input class="form-horizontal pa__form" type="checkbox" name="reljud[]" value='.$row[0].' ></input>&nbsp;&nbsp;&nbsp;'.$row[0].' - '.$row[1].'
+                  </li>';
+                  }
+                }
+                else{
+                  echo '
+                  <li class="padding-li">
+                    <input class="form-horizontal pa__form" type="checkbox" name="reljud[]" value='.$row[0].'></input>&nbsp;&nbsp;&nbsp;'.$row[0].' - '.$row[1].'
+                  </li>';
+                }
               }
               ?>
               </ol>

@@ -12,6 +12,21 @@ var re = new RegExp('~', 'g');
 var query = process.argv[2].replace(re, ' ');
 var new_query = ".I 0\n.W\n" + query;
 
+var topS = process.argv[3];
+
+var _allDocs = process.argv[2].substring(1);
+var _relevant = process.argv[3].substring(1);
+
+var _irrelevant = _allDocs.split('~');
+var relevant = _relevant.split('~');
+var irrelevant = [];
+
+for(i in _irrelevant){
+	if(relevant.indexOf(_irrelevant[i]) == -1){
+		irrelevant.push(_irrelevant[i]);
+	}
+}
+
 fs.writeFileSync(queryURL, new_query);
 
 var docFile = jsonfile.readFileSync(abs_path + 'js/invertedFile.json', {throws: false}); 
@@ -54,10 +69,14 @@ for(iQuery in qFile.file){
 	});
 
 	var rank = [];
-
+	var count = 0;
 	for (x in SC){
+		count += 1;
 		console.log(SC[x].doc_number);
 		rank.push([SC[x].doc_number, SC[x].title]);
+		if(count >= topS){
+			break;
+		}
 	}
 }
 var int_file = {sum: rank.length, rank: rank};
