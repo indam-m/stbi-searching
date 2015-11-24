@@ -73,7 +73,7 @@ InvertedFile.prototype.readDoc = function(file) {
 			reading = 'X';
 		}
 		else if (line.indexOf('.K') === 0){
-			reading = 'X';
+			reading = 'K';
 		}
 		else if (line.indexOf('.C') === 0){
 			reading = 'X';
@@ -81,11 +81,15 @@ InvertedFile.prototype.readDoc = function(file) {
 
 		if(reading === 'T' && line.indexOf('.T') !== 0){
 			data.title += line + ' ';
+			data.content += line + ' ';
 		}
 		else if(reading === 'A' && line.indexOf('.A') !== 0){
 			data.author.push(line);
 		}
 		else if(reading === 'W' && line.indexOf('.W') !== 0){
+			data.content += line + ' ';
+		}
+		else if(reading === 'K' && line.indexOf('.K') !== 0){
 			data.content += line + ' ';
 		}
 	});
