@@ -1,5 +1,6 @@
 var stemming = require('stem-porter');
 var fs  = require("fs");
+var jsonfile = require('jsonfile');
 
 function QueryFile(idf){
 	this.queries = [];
@@ -140,6 +141,9 @@ QueryFile.prototype.create = function(queryFile, stopwordFile, dTF, dIDF, dNorma
 	if(dNormal){
 		this.updateNormal();
 	}
+
+	var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
+	jsonfile.writeFileSync(abs_path + 'js/queryWeight.json', this.file, {throws:false});
 };
 
 QueryFile.prototype.updateNormal = function(){
@@ -175,13 +179,10 @@ QueryFile.prototype.updateWeight = function(){
 
 QueryFile.prototype.removeStopwords = function(sentence){
 	var temp = [];
-	var symbols = ['`', '-', '=', '+', '_', ')', '(', '*', '&', '^', '%', '$', '#', '@', '!', '~', '\\', ']', '[', '{', '}', '|', '\'', ';', ':', '"', '/', '.', ',', '<', '>', '?'];
 	var stop = this.stopwords;
 	sentence.split(" ").forEach(function (word) { 
 		word = word.toLowerCase();
-		for(x in symbols){
-			word = word.replace(symbols[x], '');
-		}	
+		word = word.replace(/[^a-zA-Z0-9 ]/g, "")
 		if(stop.indexOf(word) == -1 && word != ''){
 			temp.push(word);
 		}
