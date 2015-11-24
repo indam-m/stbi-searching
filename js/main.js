@@ -1,10 +1,11 @@
+var Relevance = require('./MainRelevance');
 var invertedFile = require('./InvertedFile');
 var queryFile = require('./QueryFile');
+
 var fs = require('fs');
+var jsonfile = require('jsonfile');
 
 var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
-
-var jsonfile = require('jsonfile');
 
 var docURL = process.argv[2];
 var queryURL = process.argv[3];
@@ -20,7 +21,7 @@ var qTF = process.argv[10];
 var qIDF = (process.argv[11] === 'true');
 var qNormal = (process.argv[12] === 'true');
 var qStem = (process.argv[13] === 'true');
-var topS = process.argv[14];
+var topS = process.argv[16];
 
 var setting = {
 	TF: dTF,
@@ -130,7 +131,6 @@ function count_niap(q_number, dFound){
 }
 
 for(iQuery in qFile.file){
-	console.log('Query number: ' + qFile.file[iQuery].query_number);
 	var SC = [];
 	for(iDoc in docFile.file){
 		var query = qFile.file[iQuery].data;
@@ -157,7 +157,6 @@ for(iQuery in qFile.file){
 	var count = 0;
 	for (x in SC){
 		count += 1;
-		console.log(SC[x].doc_number);
 		rank.push(SC[x].doc_number);
 		if(count >= topS){
 			break;
@@ -191,21 +190,8 @@ query_rank['averages'] = {precision: av_precision/n_query, recall: av_recall/n_q
 
 var outputFilename = abs_path + 'js/test3.json';
 
-fs.writeFile(abs_path + 'js/invertedFile.json', JSON.stringify(docFile.file, null, 4), function(err) {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log("JSON saved to " + 'js/invertedFile.json');
-    }
-});
-
-fs.writeFile(outputFilename, JSON.stringify(query_rank, null, 4), function(err) {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log("JSON saved to " + outputFilename);
-    }
-});
+fs.writeFileSync(abs_path + 'js/invertedFile.json', JSON.stringify(docFile.file, null, 4));
+fs.writeFileSync(outputFilename, JSON.stringify(query_rank, null, 4));
 
 var invTemp = [];
 for(i in docFile.file){
@@ -225,10 +211,143 @@ for(i in invTemp){
 	stringTemp += invTemp[i];
 }
 
-fs.writeFile(abs_path + 'js/invertedFile.txt', stringTemp, function(err) {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log('Inverted file saved to js/invertedFile.txt');
-    }
-});
+fs.writeFileSync(abs_path + 'js/invertedFile.txt', stringTemp);
+
+var relevantDocs = [];
+var irrelevantDocs = [];
+if(topN != -1){
+	for(p in query_rank.data){
+		relevantDoc = {
+			queryNumber: query_rank.data[p].number,
+			docs: []
+		};
+		irrelevantDoc = {
+			queryNumber: query_rank.data[p].number,
+			docs: []
+		}
+		for(q in query_rank.data[p].rank){
+			var qrelsqn = qRels[query_rank.data[p].number];
+			if(qrelsqn.indexOf(query_rank.data[p].rank[q]) > -1){
+				relevantDoc.docs.push(query_rank.data[p].rank[q]);
+			}
+			else{
+				irrelevantDoc.docs.push(query_rank.data[p].rank[q]);
+			}
+		}
+		relevantDocs.push(relevantDoc);
+		irrelevantDocs.push(irrelevantDoc);
+	}
+}
+else{
+	for(p in query_rank.data){
+		relevantDoc = {
+			queryNumber: query_rank.data[p].number,
+			docs: query_rank.data[p].rank.slice(0,topN)
+		};
+		irrelevantDoc = {
+			queryNumber: query_rank.data[p].number,
+			docs: query_rank.data[p].rank.slice(topN)
+		};
+		relevantDocs.push(relevantDoc);
+		irrelevantDocs.push(irrelevantDoc);	
+	}
+}
+
+var firstRetrieve = query_rank.data;
+
+var algorithm = process.argv[14]; //rocchio/regular/dechi
+var usdc = (process.argv[15] === 'true'); //true/false
+var expand = (process.argv[17] === 'true'); //true/false
+var topN = -1;
+if(algorithm === 'pseudo'){
+	topN = process.argv[18];
+	algorithm = 'rocchio';
+}
+
+//relevance judgement
+
+var newQuery = new Relevance(relevantDocs, irrelevantDocs, algorithm, usdc, topS, expand);
+
+var av_recall = 0, av_precision = 0, av_niap = 0, n_query = 0, n_query_recall = 0, n_query_niap = 0;
+
+var query_rank = {data : [], averages: {precision: 0, recall: 0, niap: 0}};
+
+for(iQuery in newQuery){
+	var SC = [];
+	for(iDoc in docFile.file){
+		var query = newQuery[iQuery].data;
+		var doc = docFile.file[iDoc].data;
+		var sim = 0;
+		for(i in query){
+			for(j in doc){
+				if(doc[j].word === query[i].word){
+					sim += doc[j].weight * query[i].weight;
+				}
+			}
+		}
+		if(sim > 0){
+			SC.push({doc_number: docFile.file[iDoc].doc_number, value: sim});
+		}
+	}
+
+	SC.sort(function(a, b) {
+	    return parseFloat(b.value) - parseFloat(a.value);
+	});
+
+	var rank = [];
+
+	var count = 0;
+	if(!usdc){
+		for (x in SC){
+			var idx = -1;
+			for(y in firstRetrieve){
+				if(newQuery[iQuery].query_number == firstRetrieve[y].number){
+					idx = y;
+				}
+			}
+			if(firstRetrieve[idx].rank.indexOf(SC[x].doc_number) == -1){
+				count += 1;
+				rank.push(SC[x].doc_number);
+				if(count >= topS){
+					break;
+				}
+			}
+		}
+	}
+	else{
+		for (x in SC){
+			count += 1;
+			rank.push(SC[x].doc_number);
+			if(count >= topS){
+				break;
+			}
+		}
+	}
+	var precision = count_precision(newQuery[iQuery].query_number, rank);
+	var recall = count_recall(newQuery[iQuery].query_number, rank);
+	var niap = count_niap(newQuery[iQuery].query_number, rank);
+
+	if(precision){
+		av_precision += precision;
+		n_query++;
+	}
+
+	if(recall){
+		av_recall += recall;
+		n_query_recall++;
+	}
+
+	if(niap){
+		av_niap += niap;
+		n_query_niap++;
+	}
+
+	query_rank['data'].push({number: newQuery[iQuery].query_number, query: newQuery[iQuery].contents, rank: rank, 
+		precision: precision, recall: recall, niap: niap});
+
+}
+
+query_rank['averages'] = {precision: av_precision/n_query, recall: av_recall/n_query_recall, niap: av_niap/n_query_niap};
+
+var outputFilename = abs_path + 'js/2ndRetreive.json';
+fs.writeFileSync(outputFilename, JSON.stringify(query_rank, null, 4));

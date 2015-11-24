@@ -76,11 +76,11 @@
         <div class="col-md-7">
           <div class="radio">
             <label>
-              <input type="radio" id="docTF" name="docTF" value="binary" checked>
+              <input type="radio" id="docTF" name="docTF" value="binary">
               No TF
             </label><br>
             <label>
-              <input type="radio" id="docTF" name="docTF" value="raw">
+              <input type="radio" id="docTF" name="docTF" value="raw" checked>
               Raw TF
             </label><br>
             <label>
@@ -133,11 +133,11 @@
         <div class="col-md-7">
           <div class="radio">
             <label>
-              <input type="radio" id="docStemming" name="docStemming" value="false" checked>
+              <input type="radio" id="docStemming" name="docStemming" value="false">
               No Stemming
             </label><br>
             <label>
-              <input type="radio" id="docStemming" name="docStemming" value="true">
+              <input type="radio" id="docStemming" name="docStemming" value="true" checked>
               Using Stemming
             </label>
           </div>
@@ -152,11 +152,11 @@
         <div class="col-md-7">
           <div class="radio">
             <label>
-              <input type="radio" id="queryTF" name="queryTF" value="binary" checked>
+              <input type="radio" id="queryTF" name="queryTF" value="binary">
               No TF
             </label><br>
             <label>
-              <input type="radio" id="queryTF" name="queryTF" value="raw">
+              <input type="radio" id="queryTF" name="queryTF" value="raw" checked>
               Raw TF
             </label><br>
             <label>
@@ -209,11 +209,11 @@
         <div class="col-md-7">
           <div class="radio">
             <label>
-              <input type="radio" id="queryStemming" name="queryStemming" value="false" checked>
+              <input type="radio" id="queryStemming" name="queryStemming" value="false">
               No Stemming
             </label><br>
             <label>
-              <input type="radio" id="queryStemming" name="queryStemming" value="true">
+              <input type="radio" id="queryStemming" name="queryStemming" value="true" checked>
               Using Stemming
             </label>
           </div>

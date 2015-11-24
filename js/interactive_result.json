@@ -1,117 +1,105 @@
 {
-    "sum": 41,
+    "sum": 44,
     "rank": [
-        [
-            "46",
-            "status report on the biological sciences communication project (bscp) . "
-        ],
         [
             "47",
             "retrieval and the general library . "
-        ],
-        [
-            "17",
-            "document recovery "
-        ],
-        [
-            "9",
-            "analysis of the role of the computer in the reproduction and distribution of scientific papers "
-        ],
-        [
-            "19",
-            "recording text information in machine form at the time of primary publication "
-        ],
-        [
-            "27",
-            "is relevance an adequate criterion in retrieval system evaluation .que "
-        ],
-        [
-            "64",
-            "paragraph analysis - a novel technique for retrieval of portions of documents . "
-        ],
-        [
-            "71",
-            "searchers want facts not folios retrieve data not documents the needle is dull sharpen it with automation . "
-        ],
-        [
-            "39",
-            "research on a linear network model and analog device for associative retrieval . "
-        ],
-        [
-            "30",
-            "relational indexing and new methods of concept organization for information retrieval . "
-        ],
-        [
-            "25",
-            "the reduction in bulk resulting from the typesetting of documents in modern composition systems "
-        ],
-        [
-            "55",
-            "satire display subsystem . "
-        ],
-        [
-            "12",
-            "the materials information network . "
-        ],
-        [
-            "69",
-            "automatic retrieval and selective dissemination of references from chemical titles : improving the selection process . "
-        ],
-        [
-            "75",
-            "a system for transcribing printed text into a machine readable format . "
-        ],
-        [
-            "56",
-            "the use of punched-tape typewriters and computers in the centralized information processing at the usaec division of technical information extension . "
-        ],
-        [
-            "58",
-            "producing indexing aids such as a dictionary or thesaurus from a single punched card deck . "
         ],
         [
             "2",
             "a new efficient structure-matching procedure and its application to automatic retrieval systems . "
         ],
         [
-            "79",
-            "implementing a large scale retrieval system for satellite information centers . "
+            "69",
+            "automatic retrieval and selective dissemination of references from chemical titles : improving the selection process . "
+        ],
+        [
+            "64",
+            "paragraph analysis - a novel technique for retrieval of portions of documents . "
+        ],
+        [
+            "27",
+            "is relevance an adequate criterion in retrieval system evaluation .que "
+        ],
+        [
+            "71",
+            "searchers want facts not folios retrieve data not documents the needle is dull sharpen it with automation . "
+        ],
+        [
+            "17",
+            "document recovery "
+        ],
+        [
+            "46",
+            "status report on the biological sciences communication project (bscp) . "
+        ],
+        [
+            "30",
+            "relational indexing and new methods of concept organization for information retrieval . "
+        ],
+        [
+            "50",
+            "english-like systems of mathematical logic for content retrieval . "
+        ],
+        [
+            "25",
+            "the reduction in bulk resulting from the typesetting of documents in modern composition systems "
+        ],
+        [
+            "19",
+            "recording text information in machine form at the time of primary publication "
+        ],
+        [
+            "39",
+            "research on a linear network model and analog device for associative retrieval . "
         ],
         [
             "22",
             "the rapid selector as currently used for information search and replica copy retrieval "
         ],
         [
-            "23",
-            "a facet analysis system . "
-        ],
-        [
             "14",
             "educational requirements for indexers in a selective dissemination system "
         ],
         [
-            "51",
-            "some observations on mechanization of library processes . "
+            "16",
+            "programing and coding techniques used in medlars "
         ],
         [
-            "26",
-            "thesaurus for literature analysis in a cancer research institution : construction and correlation with three national thesauri . "
+            "58",
+            "producing indexing aids such as a dictionary or thesaurus from a single punched card deck . "
         ],
         [
-            "38",
-            " microprint as a medium for primary publication . "
+            "61",
+            "an experiment in automatic indexing of french language documents . "
+        ],
+        [
+            "62",
+            "a mechanized information storage and retrieval system with the option for manual access . "
+        ],
+        [
+            "79",
+            "implementing a large scale retrieval system for satellite information centers . "
+        ],
+        [
+            "12",
+            "the materials information network . "
         ],
         [
             "70",
             "encoding of organic chemical structural formulas and reactions by machine . "
         ],
         [
-            "4",
-            "role of /letters/ journals in primary distribution of information "
+            "9",
+            "analysis of the role of the computer in the reproduction and distribution of scientific papers "
         ],
         [
-            "18",
-            "state-of-the-art : remote interrogation of stored documentary material "
+            "75",
+            "a system for transcribing printed text into a machine readable format . "
+        ],
+        [
+            "41",
+            "analysis, indexing and correlation of information . "
         ],
         [
             "43",
@@ -122,48 +110,72 @@
             "science information personnel an assessment and projection . "
         ],
         [
-            "62",
-            "a mechanized information storage and retrieval system with the option for manual access . "
-        ],
-        [
-            "66",
-            "linear vs. inverted file searching on serial access machines . "
-        ],
-        [
-            "50",
-            "english-like systems of mathematical logic for content retrieval . "
-        ],
-        [
-            "16",
-            "programing and coding techniques used in medlars "
-        ],
-        [
-            "11",
-            "planning, organizing and implementing mechanized systems in a space technology library "
-        ],
-        [
-            "36",
-            "computerization of book catalogues at the columbia, harvard and yale medical libraries . "
-        ],
-        [
-            "61",
-            "an experiment in automatic indexing of french language documents . "
-        ],
-        [
-            "41",
-            "analysis, indexing and correlation of information . "
-        ],
-        [
             "7",
             "a computer oriented photo-composition system for star "
+        ],
+        [
+            "23",
+            "a facet analysis system . "
+        ],
+        [
+            "51",
+            "some observations on mechanization of library processes . "
+        ],
+        [
+            "55",
+            "satire display subsystem . "
+        ],
+        [
+            "56",
+            "the use of punched-tape typewriters and computers in the centralized information processing at the usaec division of technical information extension . "
         ],
         [
             "15",
             "characteristics of programs for kwic and other computer-produced indexes "
         ],
         [
+            "26",
+            "thesaurus for literature analysis in a cancer research institution : construction and correlation with three national thesauri . "
+        ],
+        [
             "1",
             "the ibm dsd technical information center - a total systems approach combining traditional library features and mechanized computer processing "
+        ],
+        [
+            "11",
+            "planning, organizing and implementing mechanized systems in a space technology library "
+        ],
+        [
+            "66",
+            "linear vs. inverted file searching on serial access machines . "
+        ],
+        [
+            "32",
+            "document reproduction from microfilm is improved in speed  and cost by procedure making six copies per shot . "
+        ],
+        [
+            "36",
+            "computerization of book catalogues at the columbia, harvard and yale medical libraries . "
+        ],
+        [
+            "18",
+            "state-of-the-art : remote interrogation of stored documentary material "
+        ],
+        [
+            "73",
+            "microfilm and hard copy transmission from document retrieval centers . "
+        ],
+        [
+            "4",
+            "role of /letters/ journals in primary distribution of information "
+        ],
+        [
+            "78",
+            "use of flexowriters to prepare large amounts of alphabetic legal data for computer retrieval . "
+        ],
+        [
+            "38",
+            " microprint as a medium for primary publication . "
         ]
     ]
 }

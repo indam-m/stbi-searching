@@ -24,12 +24,23 @@ $querysetting = $queryTF . ' ' . $queryIDF . ' ' . $queryNormalisation . ' ' . $
 
 $command = '/usr/local/bin/node '.$abs_path.'js/main.js '.$document.' '.$query.' '.$relevance.' '.$stopword.' '.$docsetting.' '.$querysetting.' '.$algo.' '.$usdc.' '.$topS.' '.$qExp;
 
+if($algo == 'pseudo')
+  $command = $command.' '.$_GET['topN'];
+
 exec($command);
 
 $string = file_get_contents("js/test3.json");
 $output = json_decode($string);
 $results = $output->data;
 $averages = $output->averages;
+
+$_old_queries = file_get_contents("js/queryWeight.json");
+$_new_queries = file_get_contents("js/newQueryWeight.json");
+
+$old_queries = json_decode($_old_queries);
+$new_queries = json_decode($_new_queries);
+
+$secondR = json_decode(file_get_contents("js/2ndRetreive.json"));
 
 ?>
 
@@ -95,6 +106,21 @@ $averages = $output->averages;
                 <div class="pa--heading">
                   Averages
                 </div>
+                <b>Before</b>
+                <div class="row">
+                  <div class="col-md-5"><b>Precision</b></div>
+                  <div class="col-md-5"><?php echo $averages->precision; ?></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5"><b>Recall</b></div>
+                  <div class="col-md-5"><?php echo $averages->recall; ?></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5"><b>Non-Interpolated Average Precision</b></div>
+                  <div class="col-md-5"><?php echo $averages->niap; ?></div>
+                </div><br>
+
+                <b>After</b>
                 <div class="row">
                   <div class="col-md-5"><b>Precision</b></div>
                   <div class="col-md-5"><?php echo $averages->precision; ?></div>
@@ -111,60 +137,87 @@ $averages = $output->averages;
 
               <div class="pa--heading">
                 Searching Results
+                <?php echo $command; ?>
               </div>
               <ol>
                 <?php
                 foreach($results as $res){
                   echo'
                   <li class="result"><b>Query : </b><i>'.$res->query.'</i>
+                  <div class="form-horizontal pa__form">
                     <div class="row">
                       <div class="col-md-6">
                         <b> Old Query </b>
-                        <table class="table table-striped">
+                        <table class="table table-striped form-horizontal pa__form">
                           <tr>
                             <th>Word(s)</th>
                             <th>Weight</th>
-                          </tr>
-                          <tr>
-                            <td>Hahi</td><td>20</td><br>
-                          </tr>
+                          </tr>';
+                          $number = (int) $res->number;
+                          $old_query = $old_queries[$number-1];
+                          foreach($old_query->data as $row){
+                            echo'
+                            <tr>
+                              <td>'.$row->word.'</td><td>'.$row->weight.'</td>
+                            </tr>';
+                          }
+                          echo'
                         </table>
                       </div>
                       <div class="col-md-6">
                         <b> New Query </b>
-                        <table class="table table-striped">
+                        <table class="table table-striped form-horizontal pa__form">
                           <tr>
                             <th>Word(s)</th>
                             <th>Weight</th>
-                          </tr>
-                          <tr>
-                            <td>Hahi</td><td>20</td>
-                          </tr>
-                        </table>
+                          </tr>';
+                          $number = (int) $res->number;
+                          $new_query = $new_queries[$number-1];
+                          foreach($new_query->data as $row){
+                            echo'
+                            <tr>
+                              <td>'.$row->word.'</td><td>'.$row->weight.'</td>
+                            </tr>';
+                          }
+                      echo'
+                          </table>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-horizontal pa__form">
                       <div class="row">
-                        <div class="col-md-2"><b>Documents</b></div>
-                        <div class="col-md-8">
+                        <div class="col-md-3"><b>Old Documents</b></div>
+                        <div class="col-md-3">
                           <ol>';
                             foreach($res->rank as $row){
                               echo '<li>'.$row.'</li>';
                             }                          
                           echo '</ol>
                         </div>
+                        <div class="col-md-3"><b>New Documents</b></div>
+                        <div class="col-md-3">
+                          <ol>';
+                            foreach($secondR->data[$number-1]->rank as $row){
+                              echo '<li>'.$row.'</li>';
+                            }                          
+                          echo '</ol>
+                        </div>
                       </div>
                       <div class="row">
-                        <div class="col-md-2"><b>Precision</b></div>
-                        <div class="col-md-8">'.$res->precision.'</div>
+                        <div class="col-md-3"><b>Old Precision</b></div>
+                        <div class="col-md-3">'.$res->precision.'</div>
+                        <div class="col-md-3"><b>New Precision</b></div>
+                        <div class="col-md-3">'.$secondR->data[$number-1]->precision.'</div>
                       </div>
                       <div class="row">
-                        <div class="col-md-2"><b>Recall</b></div>
-                        <div class="col-md-8">'.$res->recall.'</div>
+                        <div class="col-md-3"><b>Old Recall</b></div>
+                        <div class="col-md-3">'.$res->recall.'</div>
+                        <div class="col-md-3"><b>New Recall</b></div>
+                        <div class="col-md-3">'.$secondR->data[$number-1]->recall.'</div>
                       </div>
                       <div class="row">
-                        <div class="col-md-2"><b>NIAP</b></div>
-                        <div class="col-md-8">'.$res->niap.'</div>
+                        <div class="col-md-3"><b>Old NIAP</b></div>
+                        <div class="col-md-3">'.$res->niap.'</div>
+                        <div class="col-md-3"><b>New NIAP</b></div>
+                        <div class="col-md-3">'.$secondR->data[$number-1]->niap.'</div>
                       </div>
                     </div>
                   </li><br>';

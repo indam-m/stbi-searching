@@ -28,7 +28,7 @@ RelevanceFeedback.prototype.updateWeight = function() {
 		for(j in this.query.data){
 			if(this.newWeight[i].word == this.query.data[j].word){
 				this.query.data[j].weight += this.newWeight[i].weight;
-				if(this.query.data[j].weight <=0){
+				if(this.query.data[j].weight < 0){
 					this.query.data[j].weight = 0;
 				}
 			}

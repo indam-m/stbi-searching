@@ -1,5 +1,13 @@
 <?php
 $abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
+$algorithm = $_GET['algorithm'];
+$usdc = $_GET['usdc'];
+$topS = $_GET['topS'];
+$qExp = $_GET['qExp'];
+$topN = '-1';
+if($algorithm == 'pseudo')
+  $topN = $_GET['topN'];
+
 $query_raw = $_GET['query'];
 $query = str_replace(' ', '~', $query_raw);
 $command = '/usr/local/bin/node '.$abs_path.'js/main2.js ' . $query;
@@ -84,6 +92,11 @@ $rank = $output->rank;
               <b>Found : '.$sum.'</b>
               <form action="results-feedback.php" method="post" class="form-horizontal pa__form">
               <input type="hidden" name="documents" value="'.$documents.'">
+              <input type="hidden" name="algorithm" value="'.$algorithm.'">
+              <input type="hidden" name="topS" value="'.$topS.'">
+              <input type="hidden" name="topN" value="'.$topN.'">
+              <input type="hidden" name="qExp" value="'.$qExp.'">
+              <input type="hidden" name="usdc" value="'.$usdc.'">
               <ol>';
               foreach($rank as $row){
                 echo '

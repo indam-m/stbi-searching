@@ -14,22 +14,23 @@ function MainRelevance(rDocs, irDocs, algo, sameDocs, s, qExpand){
 	var topS = s;
 	var expand = qExpand; //true/false
 
-	var newQuery = [];
-	var t = new Date().getTime();
-
-	var newQuery = []
-	var t = new Date().getTime();
+	newQueries = [];
 
 	for(i in allQuery){
-		var init = new Date().getTime();
-
-		var temp = new relevance(invertedFile, allQuery[i], relevantDocs,irrelevantDocs,algorithm,expand);	
-		newQuery.push(temp);
-		console.log((new Date().getTime()-init)/1000);
+		var idx = -1;
+		for(j in relevantDocs){
+			if(relevantDocs[j].queryNumber == allQuery[i].query_number){
+				idx = j;
+				break;
+			}
+		}
+		var temp = new relevance(invertedFile, allQuery[i], relevantDocs[idx],irrelevantDocs[idx],algorithm,expand);	
+		newQueries.push(temp);
 	}
-	var f = new Date().getTime();
-	console.log((f - t)/1000);
-	jsonfile.writeFileSync(abs_path + 'js/newQueryWeight.json', newQuery, {throws:false});
+	jsonfile.writeFileSync(abs_path + 'js/newQueryWeight.json', newQueries, {throws:false});
+
+	return newQueries;
+
 }
 
 module.exports = MainRelevance;
