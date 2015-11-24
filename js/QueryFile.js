@@ -32,6 +32,19 @@ QueryFile.prototype.readQuery = function(file) {
 		else if(line.indexOf('.W') === 0){
 			reading = 'W';
 		}
+		else if (line.indexOf('.B') === 0){
+			reading = 'X';
+		}
+		else if (line.indexOf('.N') === 0){
+			reading = 'X';
+		}
+		else if (line.indexOf('.K') === 0){
+			reading = 'X';
+		}
+		else if (line.indexOf('.C') === 0){
+			reading = 'X';
+		}
+
 
 		if(reading === 'W' && line.indexOf('.W') !== 0){
 			data.content += line + ' ';

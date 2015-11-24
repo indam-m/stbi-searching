@@ -66,6 +66,18 @@ InvertedFile.prototype.readDoc = function(file) {
 		else if(line.indexOf('.X') === 0){
 			reading = 'X';
 		}
+		else if (line.indexOf('.B') === 0){
+			reading = 'X';
+		}
+		else if (line.indexOf('.N') === 0){
+			reading = 'X';
+		}
+		else if (line.indexOf('.K') === 0){
+			reading = 'X';
+		}
+		else if (line.indexOf('.C') === 0){
+			reading = 'X';
+		}
 
 		if(reading === 'T' && line.indexOf('.T') !== 0){
 			data.title += line + ' ';
