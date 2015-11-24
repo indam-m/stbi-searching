@@ -1,181 +1,1849 @@
 {
-    "sum": 44,
+    "sum": 461,
     "rank": [
         [
-            "47",
-            "retrieval and the general library . "
+            "636",
+            "Text Searching Retrieval of Answer-Sentences and Other Answer-Passages "
         ],
         [
-            "2",
-            "a new efficient structure-matching procedure and its application to automatic retrieval systems . "
+            "65",
+            "A Study of Searching the Eye Research Literature "
         ],
         [
-            "69",
-            "automatic retrieval and selective dissemination of references from chemical titles : improving the selection process . "
+            "68",
+            "Retrieval of Answer-Providing Documents "
         ],
         [
-            "64",
-            "paragraph analysis - a novel technique for retrieval of portions of documents . "
+            "1419",
+            "Utility of Automatic Classification Systems for Information Storage and Retrieval "
         ],
         [
-            "27",
-            "is relevance an adequate criterion in retrieval system evaluation .que "
+            "509",
+            "The Use of Hierarchic Clustering in Information Retrieval "
         ],
         [
-            "71",
-            "searchers want facts not folios retrieve data not documents the needle is dull sharpen it with automation . "
+            "622",
+            "Overlap Among the Journal Articles Selected for Coverage by BIOSIS, CAS, and Ei "
+        ],
+        [
+            "448",
+            "An Evaluation of Query Expansion by the Addition of Clustered Terms     for a Document Retrieval System "
+        ],
+        [
+            "1136",
+            "Data Retrieval Systems:  Specifics and Problems "
         ],
         [
             "17",
-            "document recovery "
+            "Adventures in Librarianship "
         ],
         [
-            "46",
-            "status report on the biological sciences communication project (bscp) . "
+            "315",
+            "Automatic Abstracting and Indexing - Survey and Recommendations "
         ],
         [
-            "30",
-            "relational indexing and new methods of concept organization for information retrieval . "
+            "571",
+            "Automatic Abstracting and Indexing.. II. Production of Indicative Abstracts by Application of Contextual  Inference and Syntactic Coherence Criteria "
         ],
         [
-            "50",
-            "english-like systems of mathematical logic for content retrieval . "
+            "71",
+            "Word-Word Associations in Document Retrieval Systems "
         ],
         [
-            "25",
-            "the reduction in bulk resulting from the typesetting of documents in modern composition systems "
+            "575",
+            "A Decision Theory View of the Information Retrieval Situation: An Operations Research Approach "
         ],
         [
-            "19",
-            "recording text information in machine form at the time of primary publication "
+            "175",
+            "Automatic Information, Organization and Retrieval "
         ],
         [
-            "39",
-            "research on a linear network model and analog device for associative retrieval . "
+            "806",
+            "The Extension on Users' Literature Awareness as a Measure of Retrieval  Performance, and Its Application to MEDLARS "
         ],
         [
-            "22",
-            "the rapid selector as currently used for information search and replica copy retrieval "
+            "1327",
+            "The SMART Retrieval System Experiments in Automatic Document Processing "
         ],
         [
-            "14",
-            "educational requirements for indexers in a selective dissemination system "
+            "895",
+            "Design Equations for Retrieval System Based on the Swets Model "
         ],
         [
-            "16",
-            "programing and coding techniques used in medlars "
+            "309",
+            "The SMART Automatic Document Retrieval System - An Illustration "
         ],
         [
-            "58",
-            "producing indexing aids such as a dictionary or thesaurus from a single punched card deck . "
+            "1120",
+            "A Grammatical Elements in a Descriptor Language for an  Information Retrieval System "
+        ],
+        [
+            "1124",
+            "Some Aspects of Developing and Studying a Descriptor Information Language for General Technology "
+        ],
+        [
+            "608",
+            "A new comparison Between Conventional Indexing (MEDLARS)  and Automatic Text Processing (SMART) "
+        ],
+        [
+            "790",
+            "Computer Indexing of Medical Articles - Project Medico "
+        ],
+        [
+            "1144",
+            "Automatic Indexing "
+        ],
+        [
+            "1248",
+            "Reader in Library Service and the Computer "
+        ],
+        [
+            "565",
+            "Computer Evaluation of Indexing and Text Processing "
+        ],
+        [
+            "564",
+            "Automatic Document Classification "
+        ],
+        [
+            "461",
+            "Information Retrieval and Processing "
+        ],
+        [
+            "523",
+            "The Cost_Performance of an On-Line, Free-Text Bibliographic Retrieval System "
+        ],
+        [
+            "519",
+            "Distance between Sets as an Objective Measure of Retrieval Effectiveness "
+        ],
+        [
+            "661",
+            "Is Automatic Classification a Reasonable Application of Statistical Analysis of Text? "
+        ],
+        [
+            "77",
+            "The Effectiveness of Automatically Generated Weights and   Links in Mechanical Indexing "
+        ],
+        [
+            "606",
+            "Interface Design for An Interactive Information Retrieval System: A Literature Survey and a Research System Description "
+        ],
+        [
+            "603",
+            "The Efficiency of MEDLARS Titles for Retrieval "
+        ],
+        [
+            "596",
+            "What Makes An Automatic Keyword Classification Effective? "
+        ],
+        [
+            "176",
+            "Automated Keyword Classification for Information Retrieval "
+        ],
+        [
+            "440",
+            "Research Studies in Scientific Communication: IV. The Continuity of Dissemination of Information by \"Productive Scientists\" "
+        ],
+        [
+            "445",
+            "A Definition of Relevance for Information Retrieval "
         ],
         [
             "61",
-            "an experiment in automatic indexing of french language documents . "
+            "Expected Search Length: A Single Measure of Retrieval Effectiveness  Based on the Work Ordering Action of Retrieval Systems "
         ],
         [
-            "62",
-            "a mechanized information storage and retrieval system with the option for manual access . "
+            "666",
+            "New Methods in Automatic Extracting "
         ],
         [
-            "79",
-            "implementing a large scale retrieval system for satellite information centers . "
+            "958",
+            "The Review Article: Its Characteristics and Problems "
         ],
         [
-            "12",
-            "the materials information network . "
+            "663",
+            "Automatic Document Classification   Part II. Additional Experiments "
         ],
         [
-            "70",
-            "encoding of organic chemical structural formulas and reactions by machine . "
+            "894",
+            "An Experiment in Index Term Frequency "
         ],
         [
-            "9",
-            "analysis of the role of the computer in the reproduction and distribution of scientific papers "
+            "539",
+            "Information Retrieval Languages "
         ],
         [
-            "75",
-            "a system for transcribing printed text into a machine readable format . "
+            "830",
+            "Progress in Documentation "
         ],
         [
-            "41",
-            "analysis, indexing and correlation of information . "
+            "810",
+            "A Probabilistic Search Strategy for MEDLARS "
         ],
         [
-            "43",
-            "the education of science information personnel - a challenge to the library schools . "
+            "479",
+            "Automatic Term Classifications and Retrieval "
         ],
         [
-            "21",
-            "science information personnel an assessment and projection . "
+            "483",
+            "Performance of Automatic Information Systems "
         ],
         [
-            "7",
-            "a computer oriented photo-composition system for star "
+            "1134",
+            "Information Retrieval Learning "
         ],
         [
-            "23",
-            "a facet analysis system . "
+            "488",
+            "The Use of Automatically-Obtained Keyword Classifications     for Information Retrieval "
         ],
         [
-            "51",
-            "some observations on mechanization of library processes . "
+            "630",
+            "A Novel Philosophy for the Design of Information Storage and Retrieval Systems Appropriate for the '70's "
         ],
         [
-            "55",
-            "satire display subsystem . "
+            "1299",
+            "Current Physics Information "
         ],
         [
-            "56",
-            "the use of punched-tape typewriters and computers in the centralized information processing at the usaec division of technical information extension . "
+            "615",
+            "A Cost Model for Evaluating Information Retrieval Systems     "
         ],
         [
-            "15",
-            "characteristics of programs for kwic and other computer-produced indexes "
+            "611",
+            "What Information Dissemination Studies Imply Concerning the Design of On-Line Reference Retrieval Systems* "
         ],
         [
-            "26",
-            "thesaurus for literature analysis in a cancer research institution : construction and correlation with three national thesauri . "
+            "610",
+            "The Development of a Semantic Differential to Assess Users' Attitudes Towards An On-line Interactive Reference Retrieval System "
         ],
         [
-            "1",
-            "the ibm dsd technical information center - a total systems approach combining traditional library features and mechanized computer processing "
+            "106",
+            "Growth and Decay Curves in Scientific Citations "
         ],
         [
-            "11",
-            "planning, organizing and implementing mechanized systems in a space technology library "
+            "1090",
+            "Library Optimum "
         ],
         [
-            "66",
-            "linear vs. inverted file searching on serial access machines . "
+            "986",
+            "MEDLARS:  A Summary Review and Evaluation of Three Reports "
         ],
         [
-            "32",
-            "document reproduction from microfilm is improved in speed  and cost by procedure making six copies per shot . "
+            "179",
+            "Automatic information, organization and retrieval "
         ],
         [
-            "36",
-            "computerization of book catalogues at the columbia, harvard and yale medical libraries . "
+            "381",
+            "The Evaluation of Information Services and Products "
         ],
         [
-            "18",
-            "state-of-the-art : remote interrogation of stored documentary material "
+            "595",
+            "Selected Results From An Inquiry Into Testing of Information Retrieval Systems  "
+        ],
+        [
+            "420",
+            "The Automatic Creation of Literature Abstracts "
+        ],
+        [
+            "429",
+            "The Information Content of Titles in Engineering Literature "
+        ],
+        [
+            "805",
+            "Automatic Indexing Using Bibliographic Citations "
+        ],
+        [
+            "1335",
+            "Career Contingencies and the Fate of Sociological Research "
+        ],
+        [
+            "784",
+            "Documentation Notes "
+        ],
+        [
+            "446",
+            "Computer Assisted Indexing "
+        ],
+        [
+            "722",
+            "Information Transfer Limitations of Titles of Chemical Documents "
+        ],
+        [
+            "702",
+            "The CA Integrated Subject File.  II. Evaluation of Alternative Data Base  Organizations "
+        ],
+        [
+            "135",
+            "Design of Information Systems and Services "
+        ],
+        [
+            "459",
+            "Information Retrieval On-Line "
+        ],
+        [
+            "664",
+            "Semantic Road Maps for Literature Searchers "
+        ],
+        [
+            "499",
+            "Experiments in Automatic Extracting and Indexing "
         ],
         [
             "73",
-            "microfilm and hard copy transmission from document retrieval centers . "
+            "Effectiveness of Information Retrieval Methods "
         ],
         [
-            "4",
-            "role of /letters/ journals in primary distribution of information "
+            "525",
+            "On the Role of Subjectivity in Establishing, Using, Operating and Evaluating Information Retrieval Systems Treatise II on Retrieval System Theory "
+        ],
+        [
+            "659",
+            "A Highly Associative Document Retrieval System "
+        ],
+        [
+            "650",
+            "Relative Effectiveness of Titles, Abstracts, and Subject Headings  for Machine Retrieval from the COMPENDEX Services "
+        ],
+        [
+            "641",
+            "Representation of Concept Relations Using the TOSAR System of the IDC: Treatise III on Information Retrieval Theory "
+        ],
+        [
+            "851",
+            "Bibliographic Retrieval from Bibliographic Input; The Hypothesis and Construction of a Test "
+        ],
+        [
+            "76",
+            "Biomedical Literature: Analysis of Journal Articles    Collected by a Radiation- and Cell-Biologist "
+        ],
+        [
+            "506",
+            "A Technique for the Evaluation of a Commercial Information Service and Some Preliminary Results from the Drugdoc Service of the  Excerpta Medica Foundation "
+        ],
+        [
+            "820",
+            "Studies to Compare Retrieval Using Titles with that Using Index Terms. SDI from 'Nuclear Science Abstracts' "
+        ],
+        [
+            "503",
+            "Automatic Classification and Retrieval of Documents by Means    of a Bibliographic Pattern Discovery Algorithm "
+        ],
+        [
+            "655",
+            "The Potential Usefulness of Catalog Access Points Other Than Author, Title, and  Subject "
+        ],
+        [
+            "883",
+            "MEDLARS II: A Third Generation Bibliographic Production System "
+        ],
+        [
+            "318",
+            "A Formal System for Information Retrieval from Files "
+        ],
+        [
+            "319",
+            "Inefficiency of the Use of Boolean Functions for Information Retrieval Systems "
+        ],
+        [
+            "634",
+            "On Selecting A Measure of Retrieval Effectiveness Part II. Implementation of the Philosophy "
+        ],
+        [
+            "631",
+            "A General Statistical Model for Estimating Future Demand Levels of Data-Base Utilization Within an Information Retrieval Organization "
+        ],
+        [
+            "871",
+            "Analysis of Search Key Retrieval on a Large Bibliographic File "
+        ],
+        [
+            "625",
+            "On Selecting a Measure of Retrieval Effectiveness "
+        ],
+        [
+            "1294",
+            "Automatic Text Analysis "
+        ],
+        [
+            "1364",
+            "The New York Times Information Bank "
+        ],
+        [
+            "826",
+            "User Evaluation of Information Retrieval Systems "
+        ],
+        [
+            "1224",
+            "On one model of semantic information theory "
+        ],
+        [
+            "814",
+            "Towards Automatic Profile Construction "
+        ],
+        [
+            "51",
+            "An Experiment in Automatic Indexing "
+        ],
+        [
+            "1197",
+            "Retrieval of Single Entries from a Computerized Library Catalog File "
+        ],
+        [
+            "1182",
+            "The Bibliography of Operational Research "
+        ],
+        [
+            "26",
+            "Indexing and Abstracting by Association "
+        ],
+        [
+            "1175",
+            "Syntagmatic Relations Between Descriptors "
+        ],
+        [
+            "388",
+            "A Guide to the Construction and Use of Special Schemes "
+        ],
+        [
+            "594",
+            "On-Line Systems: Promise and Pitfalls "
+        ],
+        [
+            "590",
+            "Toward a Theory of Indexing--II "
+        ],
+        [
+            "1171",
+            "Problems of Compatibility of Information on Retrieval Systems and  Requirements to the Language of an Information Network "
+        ],
+        [
+            "421",
+            "A Business Intelligence System "
+        ],
+        [
+            "110",
+            "The Gatekeepers of Science:  Some Factors Affecting the Selection of Articles of Scientific Journals "
+        ],
+        [
+            "579",
+            "Functions of a Man-Machine Interactive Information Retrieval System "
+        ],
+        [
+            "1448",
+            "Vocabulary Control for Information Retrieval "
+        ],
+        [
+            "779",
+            "Evaluating the Economic Efficiency of a Document Retrieval System "
+        ],
+        [
+            "747",
+            "The Law of Constant Citation for Scientific Literature "
+        ],
+        [
+            "746",
+            "Subject Indexes and Automatic Document Retrieval "
+        ],
+        [
+            "573",
+            "Ascertaining Activities in a Subject Area Through Bibliometric Analysis "
+        ],
+        [
+            "731",
+            "Evaluation of an SDI Service Based on the Index Chemicus Registry System "
+        ],
+        [
+            "1081",
+            "Generalization of Epidemic Theory An Application to the Transmission of Ideas "
+        ],
+        [
+            "451",
+            "Interaction Between Requesters and a Large Mechanized retrieval System "
+        ],
+        [
+            "706",
+            "A Graph-Theoretic Algorithm for Matching Chemical Structures "
+        ],
+        [
+            "454",
+            "Information Analysis and Retrieval "
+        ],
+        [
+            "458",
+            "Information Retrieval Systems "
+        ],
+        [
+            "1078",
+            "Computerized Information Retrieval Services (Automatisierte Information Retrieval Dienste) "
+        ],
+        [
+            "691",
+            "Systems Requirements for Primary Information Systems "
+        ],
+        [
+            "668",
+            "The Automatic Encoding of Chemical Structures "
+        ],
+        [
+            "1054",
+            "Relevance Predictability in Information Retrieval Systems "
+        ],
+        [
+            "538",
+            "Information Retrieval Systems "
+        ],
+        [
+            "534",
+            "Project Intrex: A General Review "
+        ],
+        [
+            "471",
+            "Information Storage and Retrieval: tools, elements, theories "
+        ],
+        [
+            "472",
+            "Information Storage and Retrieval Systems for Individual Researchers "
+        ],
+        [
+            "530",
+            "Indexing Language Structure for Automated Retrieval "
+        ],
+        [
+            "1017",
+            "Evaluation of Adult Reference Service "
+        ],
+        [
+            "1170",
+            "Some Aspects of Subject Acquisition and Detailed Subject Retrieval of Patent Information "
+        ],
+        [
+            "662",
+            "Automatic Indexing: An Experimental Inquiry "
+        ],
+        [
+            "67",
+            "The Use of Simulation in Studying Information Storage and Retrieval Systems "
+        ],
+        [
+            "516",
+            "Problems in Information Retrieval:   Logical Jumps in the Expression of Information "
+        ],
+        [
+            "514",
+            "Evaluating the Effectiveness of an On-Line,  Natural Language Retrieval System "
+        ],
+        [
+            "129",
+            "Generation and Uses of Machine-Readable Data Bases "
+        ],
+        [
+            "956",
+            "The Cranfield II Relevance Assessments: A Critical Evaluation "
+        ],
+        [
+            "648",
+            "User Training for On-Line Information Retrieval Systems "
+        ],
+        [
+            "486",
+            "Relevance Assessments and Retrieval System Evaluation "
+        ],
+        [
+            "487",
+            "An Indirect Method of Information Retrieval "
+        ],
+        [
+            "1323",
+            "Issues in Semantics "
+        ],
+        [
+            "489",
+            "Experiments in Book Indexing by Computer "
+        ],
+        [
+            "1368",
+            "Computer-Based Bibliographic Retrieval Services "
+        ],
+        [
+            "492",
+            "Performance and Cost of \"Free-Text\" Search systems "
+        ],
+        [
+            "72",
+            "A Comparison Between Manual and Automatic Indexing Methods "
+        ],
+        [
+            "165",
+            "The Theoretical Foundation of the IDC-system:   Six Postulates for Information Retrieval "
+        ],
+        [
+            "496",
+            "The Cost and Costing of Information Storage and Retrieval  "
+        ],
+        [
+            "498",
+            "Mechanized Searching of Acts of Parliament "
+        ],
+        [
+            "1421",
+            "Title Derivative Indexing Techniques; a comparative study "
+        ],
+        [
+            "28",
+            "A Note on the Pseudo-Mathematics of Relevance "
+        ],
+        [
+            "1415",
+            "Computer-Based Selective Dissemination of Information (SDI) Service for Faculty Using Library of Congress Machine-Readable Catalog (MARC) Records "
+        ],
+        [
+            "1405",
+            "Techniques of Information Retrieval "
+        ],
+        [
+            "485",
+            "A Clustering Experiment:   First Step Towards a Computer-Generated Classification Scheme "
+        ],
+        [
+            "508",
+            "Interactive Reference Retrieval in Large Files "
+        ],
+        [
+            "484",
+            "Negotiation of Inquiries in an On-Line Retrieval System "
+        ],
+        [
+            "510",
+            "Retrieval Efficiency from Titles and the Cost of Indexing "
+        ],
+        [
+            "511",
+            "Program Design for Retrospective Searches on Large Data Bases "
+        ],
+        [
+            "512",
+            "Experiences of IIT Research Institute in Operating a Computerized Retrieval System for Searching a Variety of Data Bases "
+        ],
+        [
+            "1392",
+            "Subject Analysis: Computer Implications of Rigorous Definator "
+        ],
+        [
+            "1391",
+            "A Study of General Categories Applicable to Classification and Coding in Documentation "
+        ],
+        [
+            "1377",
+            "On-Line Reference Retrieval in a Public Library "
+        ],
+        [
+            "518",
+            "A Bayesian Approach to Interactive Retrieval "
+        ],
+        [
+            "478",
+            "Concept Organization for Information Retrieval "
+        ],
+        [
+            "1338",
+            "Notes and Letters "
+        ],
+        [
+            "522",
+            "Automatic Indexing and Generation of Classification Systems by Algorithm "
+        ],
+        [
+            "477",
+            "Some Remarks on Information Languages, Their Analysis and Comparison "
+        ],
+        [
+            "1276",
+            "Serial Literature Used by American Geologists "
+        ],
+        [
+            "526",
+            "On-Line Information retrieval as a Scientists Tool "
+        ],
+        [
+            "528",
+            "Customized User Services via Interactions with LEADERMART "
+        ],
+        [
+            "1259",
+            "Categories and Relators:  A New Scheme "
+        ],
+        [
+            "531",
+            "Index Term Weighting "
+        ],
+        [
+            "1255",
+            "Report on the Testing and Analysis of an Investigation into the Comparative Efficiency of Indexing Systems "
+        ],
+        [
+            "1252",
+            "The Recording of Library of Congress Bibliographical Data in Machine Form "
+        ],
+        [
+            "463",
+            "Information Retrieval; British and American, 1876-1976 "
+        ],
+        [
+            "1210",
+            "Is There a Pecking Order in Physics Journals? Analysis of close to a million citations puts Physical Review at the top of the list, but the order changes when we adjust for \"impact\" and \"immediacy.\" "
+        ],
+        [
+            "1191",
+            "Basis of Scientific Information "
+        ],
+        [
+            "1190",
+            "Basis of informatics "
+        ],
+        [
+            "1177",
+            "On Rational Structure of a Science Journal Article "
+        ],
+        [
+            "1172",
+            "A Statistical Analysis of Published Articles on Electrical and Power Engineering "
+        ],
+        [
+            "562",
+            "The Association Factor in Information Retrieval "
+        ],
+        [
+            "460",
+            "Information Retrieval and Documentation in Chemistry "
+        ],
+        [
+            "1164",
+            "On basic features of information retrieval language for information retrieval by title. "
+        ],
+        [
+            "1162",
+            "On basic features of information retrieval language for information retrieval by title. Part 1 "
+        ],
+        [
+            "567",
+            "The Influence of Data Characteristics and Usage on Direct Access File  Organization    "
+        ],
+        [
+            "1157",
+            "Definition of Active Stock "
+        ],
+        [
+            "1153",
+            "Nonbook Materials: The Organization of Integrated Collections "
         ],
         [
             "78",
-            "use of flexowriters to prepare large amounts of alphabetic legal data for computer retrieval . "
+            "On-Line Access to Information: NSF as an Aid to the Indexer/Cataloger "
+        ],
+        [
+            "1129",
+            "Creating an Information Language on the Basis of Semantic Text Analysis "
+        ],
+        [
+            "1091",
+            "Effectiveness of Combining Title Words and Index Terms in Machine Retrieval Searches "
+        ],
+        [
+            "434",
+            "Indexing Languages and Thesauri: Construction and Maintenance "
+        ],
+        [
+            "1072",
+            "GREMAS - A System for Classification and Documentation in Organic Chemistry "
+        ],
+        [
+            "581",
+            "Structure and Effectiveness of The Citation Identifier, an Operational Computer Program for Automatic Identification of Case Citations in Legal Literature "
+        ],
+        [
+            "1059",
+            "Microform Information Sources: Publications and Hardware "
+        ],
+        [
+            "591",
+            "The Cost-Effectiveness Analysis of Information Retrieval and Dissemination Systems "
+        ],
+        [
+            "1009",
+            "Service to Industry and Research Parks by College and University Libraries "
+        ],
+        [
+            "966",
+            "The Evidence Underlying the Cranfield Results "
+        ],
+        [
+            "960",
+            "Library Operations Research: A Process of Discovery and Justification "
+        ],
+        [
+            "378",
+            "Dialog Interactive Information Retrieval System "
+        ],
+        [
+            "126",
+            "Annual Reviews of Information Science and Technology "
+        ],
+        [
+            "928",
+            "The Divided Catalog "
+        ],
+        [
+            "600",
+            "Compound Words: A Problem in Post-Coordinate Retrieval Systems "
+        ],
+        [
+            "901",
+            "Language and Information Selected Essays on their Theory and Application "
+        ],
+        [
+            "898",
+            "Classification Systems "
+        ],
+        [
+            "150",
+            "Current Awareness Searches on CT, CBAS and ASCA "
+        ],
+        [
+            "375",
+            "Encyclopedia of Information Systems and Services "
+        ],
+        [
+            "866",
+            "A MARC II - Based Program for Retrieval and Dissemination "
+        ],
+        [
+            "835",
+            "Compression Word Coding Techniques for Information Retrieval "
+        ],
+        [
+            "824",
+            "On the Specification of Term Values in Automatic Indexing "
+        ],
+        [
+            "613",
+            "Citation Patterns fo the Cardiovascular Serial Literature "
+        ],
+        [
+            "813",
+            "Comparative Efficiency of Searching Titles, Abstracts, and Terms  in a Free-Text Data Base "
+        ],
+        [
+            "616",
+            "A Bibliometric Analysis of Certain Information Science Literature "
+        ],
+        [
+            "617",
+            "On-Line  Serials Control System in a Large Biomedical Library; 1) Description of the System "
+        ],
+        [
+            "619",
+            "Managing An Uncontrolled Vocabulary Ex Post Facto "
+        ],
+        [
+            "812",
+            "A Statistical Interpretation of Term Specificity  and Its Application in Retrieval "
+        ],
+        [
+            "328",
+            "Current approaches to classification and clump-finding at the Cambridge Language Research Unit "
+        ],
+        [
+            "807",
+            "Free Text Word Retrieval and Scientist Indexing: Performance Profile and Costs "
+        ],
+        [
+            "174",
+            "Automated Language Processing "
+        ],
+        [
+            "804",
+            "Several Law Relations in Science Bibliography - A Self-Consistent  Interpretation "
+        ],
+        [
+            "798",
+            "The Thesaurofacet: A Multipurpose Retrieval Language Tool "
+        ],
+        [
+            "797",
+            "Progress in Documentation "
+        ],
+        [
+            "195",
+            "World Biomedical Journals, 1951-60:      A Study of the Relative Significance of 1,388 Titles Indexed in      Current List of Medical Literature "
+        ],
+        [
+            "321",
+            "An Information-Theoretic Approach to Text Searching in Direct Access Systems "
+        ],
+        [
+            "633",
+            "Use of an Automatic Text Analyzer in Preparation of SDI Profiles "
+        ],
+        [
+            "197",
+            "AIM-TWX service at the University of Virginia:        A Review and Evaluation "
+        ],
+        [
+            "782",
+            "Statistics of Scientific and Technical Articles "
+        ],
+        [
+            "637",
+            "Breaking the Communication barrier Between Searcher and Literature  File: An Interactive Guide "
+        ],
+        [
+            "291",
+            "A Generalized Methodology for Library Systems Analysis "
+        ],
+        [
+            "643",
+            "A Theory of Term Importance in Automatic Text Analysis "
+        ],
+        [
+            "644",
+            "A Decision Theoretic Foundation for Indexing "
+        ],
+        [
+            "769",
+            "Keywords and Clumps "
+        ],
+        [
+            "759",
+            "A New Look at Reference Scattering "
+        ],
+        [
+            "754",
+            "A Test for the Separation of Relevant and Non-Relevant Documents  in Experimental Retrieval Collections "
+        ],
+        [
+            "745",
+            "A Fuzzy-Set-Theoretic Interpretation of Linguistic Hedges "
+        ],
+        [
+            "733",
+            "Profiling, the Key to Successful Information retrieval "
+        ],
+        [
+            "660",
+            "On Relevance, Probabilistic Indexing and Information Retrieval "
+        ],
+        [
+            "728",
+            "User Assessment of Computer-Based Bibliographic Retrieval Services "
+        ],
+        [
+            "705",
+            "Comparative Searching of Computer Data Bases "
+        ],
+        [
+            "703",
+            "A Chemical Search System for a Small Computer "
+        ],
+        [
+            "690",
+            "Experience with the Mechanized Chemical and Biological  Information Retrieval System "
+        ],
+        [
+            "689",
+            "The GREMAS System, an Integral Part of the IDC System for Chemical  Documentation "
+        ],
+        [
+            "688",
+            "The Multiterm Index:  A New Concept in Information Storage and Retrieval "
+        ],
+        [
+            "680",
+            "SWIFT:  Computerized Storage and Retrieval of Technical Information "
+        ],
+        [
+            "676",
+            "ISI's Experiences with ASCA - A Selective Dissemination System "
+        ],
+        [
+            "123",
+            "Annual Reviews of Information Science and Technology "
+        ],
+        [
+            "674",
+            "Installation and Operation of a Registry for Chemical Compounds "
+        ],
+        [
+            "670",
+            "A Chemical Structure Storage and Search System Developed at Du Pont "
+        ],
+        [
+            "677",
+            "Procedures for Converting Systematic Names of Organic Compounds into Atom-Bond Connection Tables "
+        ],
+        [
+            "669",
+            "Rapid Structure Searches via Permuted Chemical Line-Notations "
+        ],
+        [
+            "681",
+            "A Chemically Oriented Information Storage and Retrieval System. II. Computer Generation of the Wiswesser Notation  of Complex Polycyclic Structures "
+        ],
+        [
+            "686",
+            "New Developments in Primary Journal Publication "
+        ],
+        [
+            "687",
+            "Index Chemicus Registry System:  Pragmatic Approach to Substructure Chemical Retrieval "
+        ],
+        [
+            "227",
+            "A Behavioral Theory of the Firm "
+        ],
+        [
+            "243",
+            "CAN/DI system:  User reaction to a computer and information retrieval system for Canadian scientists and technologists "
+        ],
+        [
+            "252",
+            "Chemical and Engineering News "
+        ],
+        [
+            "226",
+            "A Behavioral Approach to Historical Analysis "
+        ],
+        [
+            "695",
+            "Interactive Searching of Chemical Files and Structural Diagram Generation  from Wiswesser Line Notation "
+        ],
+        [
+            "698",
+            "Encoding and Decoding WLN "
+        ],
+        [
+            "222",
+            "Review of Criteria Used to Measure Library Effectiveness "
+        ],
+        [
+            "254",
+            "Chemical Information Systems "
+        ],
+        [
+            "704",
+            "Use of the IUPAC Notation in Computer Processing of Information on Chemical Structures "
+        ],
+        [
+            "257",
+            "Classification for a General Index Language "
+        ],
+        [
+            "212",
+            "Thesaural Problems in an On-Line System "
+        ],
+        [
+            "707",
+            "French National Policy for Chemical Information and the DARC System  as a Potential Tool of This Policy "
+        ],
+        [
+            "709",
+            "The Chemical Abstracts Service Chemical Registry System.  I. General Design "
+        ],
+        [
+            "715",
+            "Articulation in the Generation of Subject Indexes by computer "
+        ],
+        [
+            "716",
+            "Reading Behavior of Chemists "
+        ],
+        [
+            "210",
+            "Survey of Medical Literature Borrowed from the National Lending Library for Science and Technology "
+        ],
+        [
+            "725",
+            "An Inquiry on New Forms of Primary Publications "
+        ],
+        [
+            "727",
+            "Evaluation of Search Time for Two Computerized Information Retrieval  Systems at the University of Georgia "
+        ],
+        [
+            "259",
+            "Classification and Indexing in Science "
+        ],
+        [
+            "206",
+            "Development of Methodologic Tools for Planning and  Managing Library Services: I. Project Goals and Approach "
+        ],
+        [
+            "267",
+            "System Analysis in University Libraries "
+        ],
+        [
+            "737",
+            "The Large Data Base File Structure Dilemma "
+        ],
+        [
+            "739",
+            "A Rapid Generalized Minicomputer Text Search System Incorporating Algebraic Entry of Boolean Strategies "
+        ],
+        [
+            "16",
+            "Adopting the Library of Congress Classification System "
+        ],
+        [
+            "200",
+            "Mechanization of Library Procedures in the Medium-sized Medical Library "
+        ],
+        [
+            "199",
+            "Statistical Bibliography in the Health Sciences "
+        ],
+        [
+            "287",
+            "Major Decision Points in Labrary Automation "
+        ],
+        [
+            "755",
+            "The Journal of Documentation "
+        ],
+        [
+            "756",
+            "Optimization of Library Expenditure on Biochemical Journals "
+        ],
+        [
+            "649",
+            "A Probabilistic Approach to Automatic Keyword Indexing Part I. On the Distribution of Specialty Words in a Technical Literature "
+        ],
+        [
+            "761",
+            "Minimum Vocabularies in Information Indexing "
+        ],
+        [
+            "762",
+            "Opening the Black Box of 'Relevance' "
+        ],
+        [
+            "765",
+            "Bradford's Law of Scattering "
+        ],
+        [
+            "288",
+            "An Approach to Performance Budgeting at the Florida Atlantic   University Library "
+        ],
+        [
+            "770",
+            "Tests on Abstracts Journals "
+        ],
+        [
+            "773",
+            "A Computer_Aided Information Service for Nuclear Science and Technology "
+        ],
+        [
+            "198",
+            "Choosing Physiology Journals "
+        ],
+        [
+            "780",
+            "The Measures of Information Retrieval Effectiveness proposed by Swets "
+        ],
+        [
+            "307",
+            "Providing Access to Externally Available Bibliographic Data Bases   in an Academic Library "
+        ],
+        [
+            "320",
+            "The Teachable Language Comprehender: A Simulation Program and Theory of Language "
+        ],
+        [
+            "785",
+            "The Parametric Description of Retrieval Tests Part I: The Basic Parameters "
+        ],
+        [
+            "786",
+            "Documentation Notes "
+        ],
+        [
+            "323",
+            "Comparative and International Librarianship; essays on themes and problems "
+        ],
+        [
+            "793",
+            "The 'Half-Life' of Periodical Literature:   Apparent and Real Obsolescence "
+        ],
+        [
+            "629",
+            "Promotion of Information Services: An Evaluation of Alternative Approaches "
+        ],
+        [
+            "627",
+            "Theoretical Foundations of Thesaurus-Construction and Some Methodological Considerations for Thesaurus-Updating "
+        ],
+        [
+            "626",
+            "The User Interface for Interactive Bibliographic Searching: An Analysis of the Attitudes of Nineteen Information Scientists "
+        ],
+        [
+            "180",
+            "Automated Information-Retrieval Systems (IRS) "
+        ],
+        [
+            "327",
+            "Computer Handling of Chemical Structure Information "
+        ],
+        [
+            "624",
+            "Clinician Search for Information "
+        ],
+        [
+            "172",
+            "As We May Think "
+        ],
+        [
+            "620",
+            "On-Line Serials Control System on a Large Biomedical Library Part II. Evaluation of Retrieval Features "
+        ],
+        [
+            "329",
+            "The identification of variable-length, equifrequent character strings in a natural language data base "
+        ],
+        [
+            "497",
+            "Some Cost Estimates for Bibliographical Searching in a Large-Scale Social Sciences Information System "
+        ],
+        [
+            "817",
+            "The Aberrystwyth Index Languages Test "
+        ],
+        [
+            "160",
+            "Analysis and Organization of Knowledge for Retrieval "
+        ],
+        [
+            "821",
+            "Recent Growth of the Literature of Biochemistry  and Changes in Ranking of Periodicals "
+        ],
+        [
+            "334",
+            "Concepts and Subject Headings "
+        ],
+        [
+            "159",
+            "An Information Retrieval Language for MARC "
+        ],
+        [
+            "827",
+            "The Evaluation of Information Retrieval Systems "
+        ],
+        [
+            "829",
+            "Foundation of Evaluation "
+        ],
+        [
+            "156",
+            "Letter to the Editor:  Assessment of Information Services "
+        ],
+        [
+            "348",
+            "A Regional Network - Ohio college Library Center "
+        ],
+        [
+            "837",
+            "Information Requirements in the Social Sciences:  Some Preliminary Considerations "
+        ],
+        [
+            "838",
+            "Prospects for a New General Classification "
+        ],
+        [
+            "839",
+            "Information Services in University Libraries "
+        ],
+        [
+            "850",
+            "Bell Laboratories' Library Real-Time Loan System (BELLREL) "
+        ],
+        [
+            "154",
+            "The UDC in its International Aspects "
+        ],
+        [
+            "853",
+            "A Fast Algorithm for Automatic Classification "
+        ],
+        [
+            "857",
+            "Teaching with MARC Tapes "
+        ],
+        [
+            "862",
+            "An Algorithm for Variable-Length Proper-Name Compression "
+        ],
+        [
+            "363",
+            "Dynamic Information and Library Processing "
+        ],
+        [
+            "868",
+            "Title-Only Entries Retrieved by Use of Truncated Search Keys "
+        ],
+        [
+            "151",
+            "Thesaurus Compilation Methods:  A Literature Review "
+        ],
+        [
+            "874",
+            "The New York Public Library Automated Book Catalog Subsystem "
+        ],
+        [
+            "876",
+            "Catalog Records retrieved by Pesonal Author Using Derived Search Keys "
+        ],
+        [
+            "605",
+            "Citations, References and the Growth of Scientific Literature: A Model of Dynamic Interaction "
+        ],
+        [
+            "889",
+            "A Comprehensive Study Based on Physics Abstracts "
+        ],
+        [
+            "148",
+            "Fair (Fast Access Information Retrieval) Project;  Aims and Methods "
+        ],
+        [
+            "137",
+            "Information Needs and Uses "
+        ],
+        [
+            "376",
+            "Encyclopedia of Information Systems and Services "
+        ],
+        [
+            "601",
+            "Some Implications of Automatic Recognition of Bibliographic Elements "
+        ],
+        [
+            "915",
+            "Library research at the University of Lancaster "
+        ],
+        [
+            "925",
+            "Library Effectiveness "
+        ],
+        [
+            "598",
+            "Curricula in Information Science:  Analysis and Development "
+        ],
+        [
+            "934",
+            "Library Education and the Public Library "
+        ],
+        [
+            "939",
+            "The Paradoxes of Library Cooperation "
+        ],
+        [
+            "953",
+            "Characteristics of the Research Literature Used by Chemists and Physicists in The United States, Part II "
+        ],
+        [
+            "131",
+            "Introduction to the ADI Annual Review "
+        ],
+        [
+            "597",
+            "Machine-Assisted Approach to General Reference Materials "
+        ],
+        [
+            "382",
+            "Evaluation of MEDLARS Documentation "
+        ],
+        [
+            "963",
+            "Catalog use in a Large Research Library "
+        ],
+        [
+            "389",
+            "Factors Determining the Performance of Indexing Systems "
+        ],
+        [
+            "968",
+            "The Ecology of Privacy "
+        ],
+        [
+            "971",
+            "Paper Impermanence as a Consequence of pH and Storage Conditions "
+        ],
+        [
+            "973",
+            "The Divided Catalog: A Summary of the Literature "
+        ],
+        [
+            "125",
+            "Machine-Readable Bibliographic Data Bases "
+        ],
+        [
+            "990",
+            "Automation Activities in the Processing Department of the Library of Congress "
+        ],
+        [
+            "991",
+            "Filing Arrangement in the Library of Congress Catalogs "
+        ],
+        [
+            "993",
+            "An Integrated, User-Oriented System for the Documentation and Control of Machine-Readable Data Files "
+        ],
+        [
+            "592",
+            "Some Remarks on Elitism in Information and the Invisible College Phenomenon in Science "
+        ],
+        [
+            "1012",
+            "Standardization Requirements of a National Program for Information Transfer "
+        ],
+        [
+            "675",
+            "Atom-by-Atom Typewriter Input for Computerized Storage and Retrieval of Chemical Structures "
+        ],
+        [
+            "1024",
+            "PRECIS in a Multilingual Context "
+        ],
+        [
+            "1027",
+            "Linguistics and Information Science "
+        ],
+        [
+            "1044",
+            "Mathematical Taxonomy "
+        ],
+        [
+            "1045",
+            "The Mathematical Theory of Communication "
+        ],
+        [
+            "1053",
+            "Methods of Information Handling "
+        ],
+        [
+            "120",
+            "Design and Evaluation of Information Systems "
+        ],
+        [
+            "1055",
+            "The Use of Biomedical Periodical Literature at the National Lending Library for Science and Technology "
+        ],
+        [
+            "419",
+            "A Statistical Approach to Mechanized Encoding and Searching of Literary  Information "
+        ],
+        [
+            "1061",
+            "Milestones in Cataloging "
+        ],
+        [
+            "1070",
+            "The Motivation to Work "
+        ],
+        [
+            "580",
+            "Overlap in the Lists of Journals Monitored by Biosis, CAS, and Ei "
+        ],
+        [
+            "1073",
+            "Automatic Construction of Thesauri and of Concept Systems for Dictionaries and Subject Lists "
+        ],
+        [
+            "116",
+            "The Documentation of Chemical Research "
+        ],
+        [
+            "114",
+            "The Analysis of Information Systems "
+        ],
+        [
+            "1089",
+            "Scientific Information by Computer "
+        ],
+        [
+            "112",
+            "Sociology Today:  Lacunae, Emphases, and Surfeits "
+        ],
+        [
+            "577",
+            "Probabilistic Models for Automatic Indexing "
+        ],
+        [
+            "1092",
+            "Method for Relating the Structure and  Properties of Chemical Compounds "
+        ],
+        [
+            "1097",
+            "Scatter of Metallurgical Publications in Abstract Journals "
+        ],
+        [
+            "1117",
+            "Mathematical Model of Classification Theory "
+        ],
+        [
+            "1118",
+            "Methods for Thesaurus Generation "
+        ],
+        [
+            "98",
+            "Scientific Communication: Its Role in the Conduct of Research and Creation of Knowledge "
+        ],
+        [
+            "91",
+            "Williams & Wilkins - The Great Leap Backward "
+        ],
+        [
+            "1125",
+            "A Contribution to the Theory of the Systems of Information Flows "
+        ],
+        [
+            "1126",
+            "Evaluation of Indexing and a Technique for Formalized Search Request Statement "
+        ],
+        [
+            "439",
+            "Research Studies in Patterns of Scientific Communication: I. General Description of Research Program "
+        ],
+        [
+            "1130",
+            "Aspect Abstracting:  A New Technique "
+        ],
+        [
+            "1132",
+            "Debugging the Technologies of an Automated IRS in Electrical Engineering: a Case Study "
+        ],
+        [
+            "82",
+            "Is Interindexer Consistency A Hobgoblin? "
+        ],
+        [
+            "79",
+            "Computer Selection of Keywords Using Word-Frequency Analysis "
+        ],
+        [
+            "1139",
+            "The Language of an Polytechnical Automated Information Retrieval System "
+        ],
+        [
+            "447",
+            "A Note on the Concept of \"Relevance\" "
+        ],
+        [
+            "450",
+            "Selection of Equifrequent Word Fragments for Information Retrieval "
+        ],
+        [
+            "1156",
+            "Formulation of Information Requests "
+        ],
+        [
+            "570",
+            "Deriving Term Relations for a Corpus by Graph Theoretical Clusters "
+        ],
+        [
+            "1158",
+            "Principles of Studying of Information Requests "
+        ],
+        [
+            "1159",
+            "Characteristics of Text Structure Complexity "
+        ],
+        [
+            "1160",
+            "Methodological problems of scientific-technical literature typology "
+        ],
+        [
+            "1161",
+            "Some problems of scientific information theory "
+        ],
+        [
+            "566",
+            "Semantic Clustering of Index Terms "
+        ],
+        [
+            "1163",
+            "The Thesaurus and some Methods of its Construction.  Part 1. "
+        ],
+        [
+            "452",
+            "The U.S. National Library of Medicine and International MEDLARS Cooperation "
+        ],
+        [
+            "66",
+            "Psychology and Information "
+        ],
+        [
+            "64",
+            "A Computer-Based Serials Control System for a Large Biomedical Library "
+        ],
+        [
+            "560",
+            "Indivisible Colleges; Diffusion of Knowledge in Scientific Communities "
+        ],
+        [
+            "63",
+            "The Publication Inflation "
+        ],
+        [
+            "1176",
+            "Techinical Bibliographies in Metallurgy "
+        ],
+        [
+            "554",
+            "Introduction to Information Science "
+        ],
+        [
+            "1179",
+            "Topical Aspects of Informatics to-date "
+        ],
+        [
+            "1180",
+            "A Notation for Coding Organic Compounds "
+        ],
+        [
+            "60",
+            "Information Science: What Is It? "
+        ],
+        [
+            "547",
+            "AIM-TWX - an Experimental On-Line Bibliographic Retrieval System "
+        ],
+        [
+            "544",
+            "The Nature of Scientific Communication and Influence "
+        ],
+        [
+            "1196",
+            "Retrieval of Bibliographic Entries from a Name-Title Catalog by Use of Truncated Search Keys "
+        ],
+        [
+            "58",
+            "Relevance Disagreements and Unclear Request Forms "
+        ],
+        [
+            "1201",
+            "Communication and Epidemic Processes "
+        ],
+        [
+            "462",
+            "Information Retrieval "
+        ],
+        [
+            "46",
+            "A Quantitative Measure of User Circulation Requirements and Its Possible Effect on Stack Thinning and Multiple Copy Determination "
+        ],
+        [
+            "1225",
+            "On semantic synthesis "
+        ],
+        [
+            "1226",
+            "Evaluation of Methods of Formal Investigation of Texts in Dead Languages "
+        ],
+        [
+            "45",
+            "Measuring the Reliability of Subject Classification by Men and Machines "
+        ],
+        [
+            "468",
+            "Analysis of On-line Searching Costs "
+        ],
+        [
+            "533",
+            "The Dynamic Scientific-Information User "
+        ],
+        [
+            "1258",
+            "Resources and Bibliographic Support for a Nationwide Library Program Final Report to the National Commission for Libraries and Information Science "
+        ],
+        [
+            "473",
+            "Bibliographic Coupling  Extended in Time: Ten Case Histories "
+        ],
+        [
+            "1264",
+            "Cost of Computer Searching "
+        ],
+        [
+            "1267",
+            "Russian Declension "
+        ],
+        [
+            "474",
+            "A Methodology for Test and Evaluation of Information Retrieval Systems "
+        ],
+        [
+            "1278",
+            "Mathematical Evaluation of the Scientific Serial "
+        ],
+        [
+            "1282",
+            "Information Retrieval Systems "
+        ],
+        [
+            "1285",
+            "Networks of Scientific Papers "
+        ],
+        [
+            "1292",
+            "Computer-Assisted Design of Complex Organic Synthesis "
+        ],
+        [
+            "44",
+            "The Distribution of Term Usage in Manipulative Indexes "
+        ],
+        [
+            "1297",
+            "Communication in the Physical and Social Sciences "
+        ],
+        [
+            "1298",
+            "Selective Dissemination and Indexing of Scientific Information "
+        ],
+        [
+            "42",
+            "The Notion of Relevance "
+        ],
+        [
+            "1300",
+            "Coherent Social Groups in Scientific Change "
+        ],
+        [
+            "1305",
+            "Copyright, Public Policy, and Information Technology "
+        ],
+        [
+            "1307",
+            "Information Retrieval Systems "
+        ],
+        [
+            "39",
+            "Bibliographic Coupling Between Scientific Papers "
         ],
         [
             "38",
-            " microprint as a medium for primary publication . "
+            "Machinelike Indexing by People "
+        ],
+        [
+            "34",
+            "Keyword-In-Context Index for Technical Literature (KWIC Index) "
+        ],
+        [
+            "520",
+            "CA Condensates as a Retrospective Search Tool\tA Commentary "
+        ],
+        [
+            "1362",
+            "The CAN/SDI Project Th SDI Program of Canada's National Science Library "
+        ],
+        [
+            "30",
+            "Vocabulary Building and Control Techniques "
+        ],
+        [
+            "29",
+            "Some Questions Concerning \"Information Need\" "
+        ],
+        [
+            "1369",
+            "Journal Usage Survey Method and Application "
+        ],
+        [
+            "480",
+            "Some Structural Characteristics of Articulated Subject Indexes "
+        ],
+        [
+            "1382",
+            "Statistics and Semantics "
+        ],
+        [
+            "1383",
+            "Strategies for Change in Information Programs "
+        ],
+        [
+            "1387",
+            "The Structure of Scientific Revolutions "
+        ],
+        [
+            "1388",
+            "Structure of Discourse "
+        ],
+        [
+            "515",
+            "A Journal Selection Model and Its Implications for a Library System "
+        ],
+        [
+            "481",
+            "Integrated Information Processing and the Case for a National Network "
+        ],
+        [
+            "1396",
+            "Survey of Commercially Available Computer-Readable Bibliographic Data Bases "
+        ],
+        [
+            "1399",
+            "Syntactic Structures "
+        ],
+        [
+            "490",
+            "Computer Use in Information and Data Handling:    an Appraisal of Its Economic Aspects "
+        ],
+        [
+            "1409",
+            "Text, Machine, and Man "
+        ],
+        [
+            "1413",
+            "Thesaurus Construction "
+        ],
+        [
+            "1414",
+            "The Thesaurus in Retrieval "
+        ],
+        [
+            "502",
+            "Information-Seeking Behavior of Catalog Users "
+        ],
+        [
+            "1418",
+            "Journal Usage Patterns and their Implications in the Planning of Library Systems "
+        ],
+        [
+            "501",
+            "Compilation of Thesauri for Use in Computer Systems "
+        ],
+        [
+            "495",
+            "Optimum Procedures for Economic Information Retrieval "
+        ],
+        [
+            "1422",
+            "Towards Information Retrieval "
+        ],
+        [
+            "1427",
+            "Understanding Media:  the extensions of man "
+        ],
+        [
+            "1432",
+            "The Ranking of Biomedical Periodicals from the Indian Scientist's Point of View "
+        ],
+        [
+            "1437",
+            "NATIS: the theme for the 1970s "
+        ],
+        [
+            "10",
+            "Access to Periodical Resources "
         ]
     ]
 }
