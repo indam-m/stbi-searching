@@ -7,9 +7,9 @@ var jsonfile = require('jsonfile');
 
 var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
 
-var docURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/cisi.all';
-var queryURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/query.text';
-var qrelsFile = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/qrels.text';
+var docURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all';
+var queryURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text';
+var qrelsFile = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text';
 var stopwordFile = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt';
 
 var dTF = 'raw';
@@ -27,11 +27,6 @@ var algorithms = ['rocchio', 'regular', 'dechi', 'pseudo']; //rocchio/regular/de
 
 var usdcs = [true, false]; //true/false
 var expands = [true, false]; //true/false
-var topN = -1;
-if(algorithm === 'pseudo'){
-	topN = 5;
-	algorithm = 'rocchio';
-}
 
 var setting = {
 	TF: dTF,
@@ -144,11 +139,11 @@ function writeExperiment(contents){
 		var _c = contents[i];
 		content += 'Algorithm\t' + _c['algo'] + '\n';
 		content += 'Query Expansion\t' + _c['qExp'] + '\n';
-		content += 'Same Documents\t' + _c['sd'] + '\n\n';
+		content += 'Same Documents\t' + _c['sd'] + '\n';
 		content += ' \tBefore\tAfter\n';
 		content += 'Precision\t' + _c['b_precision'] + '\t' + _c['a_precision'] + '\n';
 		content += 'Recall\t' + _c['b_recall'] + '\t' + _c['a_recall'] + '\n';
-		content += 'NIAP\t' + _c['b_niap'] + '\t' + _c['a_niap'] + '\n\n\n';
+		content += 'NIAP\t' + _c['b_niap'] + '\t' + _c['a_niap'] + '\n\n';
 
 	}
 	return content;
@@ -178,6 +173,12 @@ for(ii in algorithms){
 				a_recall: 0,
 				a_niap: 0
 			};
+
+			var topN = -1;
+			if(algorithm === 'pseudo'){
+				topN = 5;
+				algorithm = 'rocchio';
+			}
 
 			for(iQuery in qFile.file){
 				var SC = [];
@@ -388,4 +389,4 @@ for(ii in algorithms){
 	}
 }
 
-fs.writeFileSync(abs_path + 'testsets/xADI/cisi.txt', writeExperiment(thecontents));
+fs.writeFileSync(abs_path + 'testsets/xADI/adi.txt', writeExperiment(thecontents));
