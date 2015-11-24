@@ -41,6 +41,7 @@ $old_queries = json_decode($_old_queries);
 $new_queries = json_decode($_new_queries);
 
 $secondR = json_decode(file_get_contents("js/2ndRetreive.json"));
+$post_averages = $secondR->averages;
 
 ?>
 
@@ -123,15 +124,15 @@ $secondR = json_decode(file_get_contents("js/2ndRetreive.json"));
                 <b>After</b>
                 <div class="row">
                   <div class="col-md-5"><b>Precision</b></div>
-                  <div class="col-md-5"><?php echo $averages->precision; ?></div>
+                  <div class="col-md-5"><?php echo $post_averages->precision; ?></div>
                 </div>
                 <div class="row">
                   <div class="col-md-5"><b>Recall</b></div>
-                  <div class="col-md-5"><?php echo $averages->recall; ?></div>
+                  <div class="col-md-5"><?php echo $post_averages->recall; ?></div>
                 </div>
                 <div class="row">
                   <div class="col-md-5"><b>Non-Interpolated Average Precision</b></div>
-                  <div class="col-md-5"><?php echo $averages->niap; ?></div>
+                  <div class="col-md-5"><?php echo $post_averages->niap; ?></div>
                 </div>
               </div>
 
