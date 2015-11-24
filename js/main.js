@@ -227,7 +227,7 @@ if(topN != -1){
 		}
 		for(q in query_rank.data[p].rank){
 			var qrelsqn = qRels[query_rank.data[p].number];
-			if(qrelsqn.indexOf(query_rank.data[p].rank[q]) > -1){
+			if(qrelsqn && qrelsqn.indexOf(query_rank.data[p].rank[q]) > -1){
 				relevantDoc.docs.push(query_rank.data[p].rank[q]);
 			}
 			else{
