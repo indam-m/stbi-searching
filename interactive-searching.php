@@ -4,8 +4,8 @@
     <div class="col-md-7">
       <select id="algorithm" class="form-control">
         <option value="rocchio">Rocchio</option>
-        <option value="idereg">Ide Regular</option>
-        <option value="idedechi">Ide dec Hi</option>
+        <option value="regular">Ide Regular</option>
+        <option value="dechi">Ide dec Hi</option>
         <option value="pseudo">Pseudo Relevance Feedback</option>
       </select>
     </div>

@@ -14,11 +14,19 @@ $queryTF = $_GET['queryTF'];
 $queryIDF = $_GET['queryIDF'];
 $queryNormalisation = $_GET['queryNormalisation'];
 $queryStemming = $_GET['queryStemming'];
+$algo = $_GET['algorithm'];
+$usdc = $_GET['usdc'];
+$topS = $_GET['topS'];
+$qExp =$_GET['qExp'];
 
 $docsetting = $docTF . ' ' . $docIDF . ' ' . $docNormalisation . ' ' . $docStemming;
 $querysetting = $queryTF . ' ' . $queryIDF . ' ' . $queryNormalisation . ' ' . $queryStemming;
 
-$command = '/usr/local/bin/node '.$abs_path.'js/main.js '.$document.' '.$query.' '.$relevance.' '.$stopword.' '.$docsetting.' '.$querysetting;
+$command = '/usr/local/bin/node '.$abs_path.'js/main.js '.$document.' '.$query.' '.$relevance.' '.$stopword.' '.$docsetting.' '.$querysetting.' '.$algo.' '.$usdc.' '.$topS.' '.$qExp;
+if($algo == 'pseudo')
+  $command = $command . ' ' . $_GET['topNs'];
+
+
 exec($command);
 
 $string = file_get_contents("js/test3.json");

@@ -74,11 +74,16 @@ $rank = $output->rank;
                 Searching Results
               </div>
               <br>
-              <?php echo'
+              <?php
+              $documents = '';
+              foreach ($rank as $row) {
+                $documents = $documents . '~' . $row[0];
+              }
+              echo'
               <div class="pa--heading2">Results of <i>'.$query_raw.'</i></div>
               <b>Found : '.$sum.'</b>
               <form action="results-feedback.php" method="post" class="form-horizontal pa__form">
-              <div class="form-group">
+              <input type="hidden" name="documents" value="'.$documents.'">
               <ol>';
               foreach($rank as $row){
                 echo '
