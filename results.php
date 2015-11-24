@@ -142,6 +142,7 @@ $post_averages = $secondR->averages;
               <ol>
                 <?php
                 foreach($results as $res){
+                  $number = (int) $res->number;
                   echo'
                   <li class="result"><b>Query : </b><i>'.$res->query.'</i>
                   <div class="form-horizontal pa__form">
@@ -153,7 +154,6 @@ $post_averages = $secondR->averages;
                             <th>Word(s)</th>
                             <th>Weight</th>
                           </tr>';
-                          $number = (int) $res->number;
                           $old_query = $old_queries[$number-1];
                           foreach($old_query->data as $row){
                             echo'

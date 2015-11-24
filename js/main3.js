@@ -96,48 +96,12 @@ function count_niap(q_number, dFound){
 		return null;
 }
 
-function writeExperiment(query_rank, dTF, dIDF, dNormal, dStem, qTF, qIDF, qNormal, qStem){
-	var _dNormal, _dStem, _qNormal, _qStem, _dIDF, _qIDF, _dTF, _qTF;
-	if(dNormal)
-		_dNormal = 'Using Normalisation';
-	else
-		_dNormal = 'No Normalisation';
+function writeExperiment(var contents){
+	var content = 'Algorithm\tQuery Expansion\tSame Documents\tPrecision\tRecall\tNIAP\n';	
 
-	if(dIDF)
-		_dIDF = 'Using IDF';
-	else
-		_dIDF = 'No IDF';
-
-	if(dStem)
-		_dStem = 'Using Stemming';
-	else
-		_dStem = 'No Stemming';
-
-	if(dTF === 'binary')
-		_dTF = 'Binary TF';
-	else if(dTF === 'aug')
-		_dTF = 'Augmented TF';
-	else if(dTF === 'raw')
-		_dTF = 'Raw TF';
-	else
-		_dTF = 'Logarithmic TF';
-
-	var content = 'Settings\n';
-	content += 'TF\t'+_dTF+'\n';
-	content += 'IDF\t'+_dIDF+'\n';
-	content += 'Normalisation\t'+_dNormal+'\n';
-	content += 'Stemming\t'+_dStem+'\n\n';
-	content += 'Averages\n';
-	content += 'Precision\t' + query_rank['averages']['precision'] + '\n';
-	content += 'Recall\t' + query_rank['averages']['recall'] + '\n';
-	content += 'Non-Interpolated Average Precision\t' + query_rank['averages']['niap'] + '\n\n';
-	content += 'Query Number\tPrecision\tRecall\tNon-Interpolated Average Precision\n';
-	var data = query_rank['data'];
-	for(r in data){
-		content += data[r]['number'] + '\t';
-		content += data[r]['precision'] + '\t';
-		content += data[r]['recall'] + '\t';
-		content += data[r]['niap'] + '\n';
+	for(i in contents){
+		var _c = contents[i];
+		content += _c['algorithm'] + '\t' + _c['qExp'] + '\t' + _c['usdc'] + '\t' + _c['precision'] + '\t' + _c['recall'] + '\t' + _c['niap'] + '\n';
 	}
 	return content;
 }

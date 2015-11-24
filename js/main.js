@@ -23,6 +23,15 @@ var qNormal = (process.argv[12] === 'true');
 var qStem = (process.argv[13] === 'true');
 var topS = process.argv[16];
 
+var algorithm = process.argv[14]; //rocchio/regular/dechi
+var usdc = (process.argv[15] === 'true'); //true/false
+var expand = (process.argv[17] === 'true'); //true/false
+var topN = -1;
+if(algorithm === 'pseudo'){
+	topN = process.argv[18];
+	algorithm = 'rocchio';
+}
+
 var setting = {
 	TF: dTF,
 	IDF: dIDF,
@@ -215,7 +224,7 @@ fs.writeFileSync(abs_path + 'js/invertedFile.txt', stringTemp);
 
 var relevantDocs = [];
 var irrelevantDocs = [];
-if(topN != -1){
+if(topN == -1){
 	for(p in query_rank.data){
 		relevantDoc = {
 			queryNumber: query_rank.data[p].number,
@@ -254,15 +263,6 @@ else{
 }
 
 var firstRetrieve = query_rank.data;
-
-var algorithm = process.argv[14]; //rocchio/regular/dechi
-var usdc = (process.argv[15] === 'true'); //true/false
-var expand = (process.argv[17] === 'true'); //true/false
-var topN = -1;
-if(algorithm === 'pseudo'){
-	topN = process.argv[18];
-	algorithm = 'rocchio';
-}
 
 //relevance judgement
 

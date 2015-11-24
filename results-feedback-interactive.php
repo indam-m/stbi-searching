@@ -94,14 +94,10 @@ $new_queries = json_decode($_new_queries);
           <div class="row">
             <div class="col-md-7 grid-center pa__box">
               <div class="pa--heading">
-                Searching Results <?php echo $command; ?>
+                Searching Results
               </div>
               <br>
               <?php
-              // $documents = '';
-              // foreach ($rank as $row) {
-              //   $documents = $documents . '~' . $row[0];
-              // }
               echo'
               <div class="pa--heading2">Results of <i>'.$query.'</i></div>
               <div class="row">

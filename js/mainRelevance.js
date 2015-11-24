@@ -13,8 +13,8 @@ function MainRelevance(rDocs, irDocs, algo, sameDocs, s, qExpand){
 	var usdc = sameDocs; //true/false
 	var topS = s;
 	var expand = qExpand; //true/false
-
-	newQueries = [];
+	
+	var newQueries = [];
 
 	for(i in allQuery){
 		var idx = -1;
@@ -24,6 +24,7 @@ function MainRelevance(rDocs, irDocs, algo, sameDocs, s, qExpand){
 				break;
 			}
 		}
+
 		var temp = new relevance(invertedFile, allQuery[i], relevantDocs[idx].docs,irrelevantDocs[idx].docs,algorithm,expand);	
 		newQueries.push(temp);
 	}
