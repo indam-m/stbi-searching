@@ -1,9 +1,31 @@
-/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all
-/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text
-/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text
-
-/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/cisi.all
-/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/query.text
-/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/qrels.text
-
 /Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt
+
+ADI
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text 
+
+CISI
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/cisi.all 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/query.text 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/CISI/qrels.text 
+
+CACM
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/CACM/cacm.all 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/CACM/query.text 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/CACM/qrels.text 
+
+CRAN
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/CRAN/cran.all 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/CRAN/query.text 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/CRAN/qrels.text 
+
+MED
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/MED/med.all 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/MED/query.text 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/MED/qrels.text 
+
+NPL
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/NPL/npl.all 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/NPL/query.text 
+/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/NPL/qrels.text 
