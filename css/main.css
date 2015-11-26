@@ -789,3 +789,9 @@ ul.timeline > li > .timeline-panel:after {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+
+.theresults {
+  font-size: 17px;
+  color: #DEB887;
+  text-align: center;
+}

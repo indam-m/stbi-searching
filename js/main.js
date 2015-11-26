@@ -166,7 +166,7 @@ for(iQuery in qFile.file){
 	var count = 0;
 	for (x in SC){
 		count += 1;
-		rank.push(SC[x].doc_number);
+		rank.push(SC[x]);
 		if(count >= topS){
 			break;
 		}
@@ -317,7 +317,7 @@ for(iQuery in newQuery){
 	else{
 		for (x in SC){
 			count += 1;
-			rank.push(SC[x].doc_number);
+			rank.push(SC[x]);
 			if(count >= topS){
 				break;
 			}

@@ -124,7 +124,6 @@ $rank = $output->rank;
               }
               ?>
               </ol>
-            </div>
                 <div class="form-group">
                   <div class="col-md-11 pa__btn-container-form">
                     <input type="submit" class="btn btn-tosca btn-margin-bottom" value="Searching"></input>

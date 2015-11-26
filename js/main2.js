@@ -73,7 +73,7 @@ for(iQuery in qFile.file){
 	for (x in SC){
 		count += 1;
 		console.log(SC[x].doc_number);
-		rank.push([SC[x].doc_number, SC[x].title]);
+		rank.push([SC[x].doc_number, SC[x].title, SC[x].value]);
 		if(count >= topS){
 			break;
 		}

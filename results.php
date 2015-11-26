@@ -148,7 +148,7 @@ $post_averages = $secondR->averages;
                   <div class="form-horizontal pa__form">
                     <div class="row">
                       <div class="col-md-6">
-                        <b> Old Query </b>
+                        <div class="theresults"><b> Old Query </b></div>
                         <table class="table table-striped form-horizontal pa__form">
                           <tr>
                             <th>Word(s)</th>
@@ -165,7 +165,7 @@ $post_averages = $secondR->averages;
                         </table>
                       </div>
                       <div class="col-md-6">
-                        <b> New Query </b>
+                        <div class="theresults"><b> New Query </b></div>
                         <table class="table table-striped form-horizontal pa__form">
                           <tr>
                             <th>Word(s)</th>
@@ -184,21 +184,39 @@ $post_averages = $secondR->averages;
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-md-3"><b>Old Documents</b></div>
-                        <div class="col-md-3">
-                          <ol>';
+                        <div class="col-md-6">
+                          <div class="theresults"><b> Old Results </b></div>
+                          <table class="table table-striped form-horizontal pa__form">
+                            <tr>
+                              <th>Rank</th><th>Doc</th><th>SC</th>
+                            </tr>';
+                            $n = 0;
                             foreach($res->rank as $row){
-                              echo '<li>'.$row.'</li>';
-                            }                          
-                          echo '</ol>
+                              $n++;
+                              echo '<tr>
+                                <td>'.$n.'</td>
+                                <td>'.$row->doc_number.'</td>
+                                <td>'.$row->value.'</td>
+                              </tr>';
+                            }
+                          echo '</table>
                         </div>
-                        <div class="col-md-3"><b>New Documents</b></div>
-                        <div class="col-md-3">
-                          <ol>';
+                        <div class="col-md-6">
+                          <div class="theresults"><b> New Results </b></div>
+                          <table class="table table-striped form-horizontal pa__form">
+                            <tr>
+                              <th>Rank</th><th>Doc</th><th>SC</th>
+                            </tr>';
+                            $n = 0;
                             foreach($secondR->data[$number-1]->rank as $row){
-                              echo '<li>'.$row.'</li>';
-                            }                          
-                          echo '</ol>
+                              $n++;
+                              echo '<tr>
+                                <td>'.$n.'</td>
+                                <td>'.$row->doc_number.'</td>
+                                <td>'.$row->value.'</td>
+                              </tr>';
+                            }
+                          echo '</table>
                         </div>
                       </div>
                       <div class="row">

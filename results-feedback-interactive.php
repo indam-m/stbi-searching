@@ -21,11 +21,16 @@ if(!empty($_POST['reljud'])){
 $command = '/usr/local/bin/node '.$abs_path.'js/mainR.js '.$documents.' '.$reljuds.' '.$algorithm.' '.$usdc.' '.$topS.' '.$qExp.' '.$topN.' '.$query;
 exec($command);
 
-$string = file_get_contents("js/new_interactive_result.json");
+$string = file_get_contents("js/interactive_result.json");
 $output = json_decode($string);
 $sum = $output->sum;
 $rank = $output->rank;
-$query = $output->query;
+
+$new_output = json_decode(file_get_contents("js/new_interactive_result.json"));
+
+$new_rank = $new_output->rank;
+$new_sum = $new_output->sum;
+$query = $new_output->query;
 
 $_old_queries = file_get_contents("js/queryWeight.json");
 $_new_queries = file_get_contents("js/newQueryWeight.json");
@@ -102,7 +107,7 @@ $new_queries = json_decode($_new_queries);
               <div class="pa--heading2">Results of <i>'.$query.'</i></div>
               <div class="row">
               <div class="col-md-6">
-                <b> Old Query </b>
+                <div class="theresults"><b> Old Query </b></div>
                 <table class="table table-striped form-horizontal pa__form">
                   <tr>
                     <th>Word(s)</th>
@@ -118,7 +123,7 @@ $new_queries = json_decode($_new_queries);
                 </table>
               </div>
               <div class="col-md-6">
-                <b> New Query </b>
+                <div class="theresults"><b> New Query </b></div>
                 <table class="table table-striped form-horizontal pa__form">
                   <tr>
                     <th>Word(s)</th>
@@ -130,18 +135,49 @@ $new_queries = json_decode($_new_queries);
                       <td>'.$row->word.'</td><td>'.$row->weight.'</td>
                     </tr>';
                   }
+              $n = 0;
               echo'
                   </table>
                 </div>
               </div>
-              <b>Found : '.$sum.'</b>
-              <ol>';
-              foreach($rank as $row){
-              	echo '
-                  <li class="padding-li">'.$row[0].' - '.$row[1].'</li>';
-              }
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="theresults"><b> Old Results </b></div><br>
+                  <b>Found : '.$sum.'</b>
+                  <table class="table table-striped form-horizontal pa__form">
+                    <tr>
+                      <th>Rank</th><th>Doc</th><th>SC</th>
+                    </tr>';
+                    foreach($rank as $row){
+                      $n++;
+                      echo '<tr>
+                        <td>'.$n.'</td>
+                        <td>'.$row[0].'</td>
+                        <td>'.$row[2].'</td>
+                      </tr>';
+                    };
+                  echo '</table>
+                </div>
+                <div class="col-md-6">
+                  <div class="theresults"><b> New Results </b></div><br>
+                  <b>Found : '.$new_sum.'</b>
+                  <table class="table table-striped form-horizontal pa__form">
+                    <tr>
+                      <th>Rank</th><th>Doc</th><th>SC</th>
+                    </tr>';
+                    $n = 0;
+                    foreach($new_rank as $row){
+                      $n++;
+                      echo '<tr>
+                        <td>'.$n.'</td>
+                        <td>'.$row[0].'</td>
+                        <td>'.$row[2].'</td>
+                      </tr>';
+                    };
+                  echo '</table>
+                </div>
+              </div>';
               ?>
-              </ol>
             </div>
             </div>
           </div>

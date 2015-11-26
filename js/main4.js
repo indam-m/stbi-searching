@@ -7,9 +7,9 @@ var jsonfile = require('jsonfile');
 
 var abs_path = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/';
 
-var docURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/adi.all';
-var queryURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/query.text';
-var qrelsFile = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/ADI/qrels.text';
+var docURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/NPL/npl.all';
+var queryURL = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/NPL/query.text';
+var qrelsFile = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/test\ collection/NPL/qrels.text';
 var stopwordFile = '/Applications/XAMPP/xamppfiles/htdocs/stbi01/testsets/stopWord.txt';
 
 var dTF = 'raw';
@@ -26,7 +26,7 @@ var topS = 25;
 var algorithms = ['rocchio', 'regular', 'dechi', 'pseudo']; //rocchio/regular/dechi
 
 var usdcs = [true, false]; //true/false
-var expands = [true, false]; //true/false
+var expands = [false]; //true/false
 
 var setting = {
 	TF: dTF,
@@ -389,4 +389,4 @@ for(ii in algorithms){
 	}
 }
 
-fs.writeFileSync(abs_path + 'testsets/xADI/adi.txt', writeExperiment(thecontents));
+fs.writeFileSync(abs_path + 'testsets/xADI/npl.txt', writeExperiment(thecontents));
